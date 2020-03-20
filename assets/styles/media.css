@@ -192,7 +192,6 @@
 	.ppd.footer-link {
 		padding-left: 0;
 		margin-top: 0;
-		outline
 	}
 	form .ppd:after {
 		left: 0.4em;
@@ -376,8 +375,8 @@
 	.circle-descr-text > .circle-descr-descr:first-child {
 		margin-top: 25px;
 	}
-	/*-*/
-	#uninterrupted-supplier {}
+
+	/*-uninterrupted-supplier-*/
 	#pallet-img {
 		width: 262px;
 		height: 262px;
@@ -444,7 +443,7 @@
 		width: 508px;
 	}
 	
-	#density-radios {
+	.density-radios {
 		width: 100%;
 	}
 	.density-radio {
@@ -509,6 +508,11 @@
 	}
 	#owner h2 {
 		margin: 36px 0 7px;
+	}
+	#owner .decor-bg:before {
+		top: -275px;
+		right: calc(50% - 760px);
+		opacity: 0.2;
 	}
 	#owner .decor-bg:after {
 		width: 463px;
@@ -749,20 +753,20 @@
 		bottom: 0;
 		background-color: var(--bg-btn);
 	}
-	.dlist-outer {
+	header .dlist-outer {
 		width: 145px;
 		margin-left: 0;
 	}
-	.dlist-hover {
+	header .dlist-hover {
 		top: 64px;
 	}
-	.dlist-hover:before {
+	header .dlist-hover:before {
 		top: -64px;
 		right: -10px;
 		width: 35px;
 		height: 65px;
 	}
-	.dlist-elems {
+	header .dlist-elems {
 		width: 160px;
 		white-space: nowrap;
 	}
@@ -770,7 +774,7 @@
 		font-size: 14px;
 		line-height: 40px;
 	}
-	.dlist-burger {
+	header .dlist-burger {
 		top: -45px;
 	}
 
@@ -875,6 +879,12 @@
 		flex-wrap: wrap;
 		width: 240px;
 		margin-top: 155px;
+	}
+	form .flex {
+		flex-direction: column;
+	}
+	form .flex .ppd {
+		padding-left: 37px;
 	}
 	.density-elem {
 		width: 74px;
@@ -1103,8 +1113,17 @@
 	#order-free h2 {
 		margin: 0 0 8px;
 	}
-	.form-outer.white input, .form-outer.white input[type="text"] {
+	.form-outer.white input, 
+	.form-outer.white input[type="text"] {
 		width: 220px;
+	}
+	.popup.form-outer.white input, 
+	.popup.form-outer.white input[type="text"] {
+		width: unset;
+		font-size: 14px;
+	}
+	.form-outer.white .form-radio-title {
+		text-align: center;
 	}
 	#order-free p.h3 {
 		width: 230px;
@@ -1311,10 +1330,18 @@
 		margin: 5px auto 0 0;
 	}
 
+	.popup-scroll {
+		overflow: scroll;
+	}
 	.popup {
 		width: 280px;
 		border-width: 5px;
+	}
+	.popup.popmsg {
 		padding: 52px 15px 40px;
+	}
+	.popup.poptext {
+		padding: 34px 15px 40px;
 	}
 	.popup.form-outer.white {
 		width: 280px;
@@ -1323,6 +1350,11 @@
 	}
 	.popmsg {
 		padding-top: 110px;
+	}
+	.popcookie {
+		padding: 20px 15px;
+		left: 36px;
+		width: unset;
 	}
 	#p-complete:before {
 		top: -54px;
@@ -1354,6 +1386,8 @@
 	}
 	.popup.form-outer.white input[type="text"]{
 		width: 100%;
+		background-color: white;
+		font-size: 14px;
 	}
 	.popup .validate {
 		width: 100%;
@@ -1364,6 +1398,14 @@
 	}
 	.popup .ppd:after {
 		display: none;
+	}
+	.popup .density-radios {
+		flex-wrap: wrap;
+		margin-bottom: 20px;
+	}
+	.popup .density-radio {
+		width: 115px;
+		margin-bottom: 20px;
 	}
 }
 

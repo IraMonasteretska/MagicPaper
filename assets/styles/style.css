@@ -10,6 +10,7 @@
 	--fair: #f3f7fa;
 	--addcolor1: #748393;
 	--bg-btn: #232527;
+	--bg-btn-fair: #33373c;
 	--bg-color: #1a1c1e;
 	--bg-mob: #121618;
 }
@@ -23,6 +24,9 @@ body.eclipse,
 body.eclipse2 {
 	overflow: hidden;
 }
+a, button, input {
+	outline: none;
+}
 
 #eclipse,
 #eclipse2 {
@@ -34,47 +38,87 @@ body.eclipse2 {
 	opacity: 0;
 	z-index: -11;
 	background-color: #1a1c1e87;
+	-webkit-transition: opacity 0.3s ease 0s, z-index 0s linear 0.3s;
+    -moz-transition: opacity 0.3s ease 0s, z-index 0s linear 0.3s;
+    -o-transition: opacity 0.3s ease 0s, z-index 0s linear 0.3s;
+    -ms-transition: opacity 0.3s ease 0s, z-index 0s linear 0.3s;
 	transition: opacity 0.3s ease 0s, z-index 0s linear 0.3s;
 }
-body.eclipse #eclipse {
-	opacity: 1;
-	z-index: 990;
-	transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
-}
+body.eclipse #eclipse,
 body.eclipse2 #eclipse2 {
 	opacity: 1;
-	z-index: 995;
+	-webkit-transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
+    -moz-transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
+    -o-transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
+    -ms-transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
 	transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
 }
-.popup,
-.popup.form-outer.white {
+body.eclipse #eclipse {
+	z-index: 980;
+}
+body.eclipse2 #eclipse2 {
+	z-index: 990;
+}
+.popup-scroll {
 	position: fixed;
 	top: 50%;
 	left: 50%;
+	z-index: -10;
+	visibility: hidden;
+	opacity: 0;
+	padding: 40px 0;
+	box-sizing: border-box;
+	transform: translate(-50%, -50%);
+	max-height: 100vh;
+	-webkit-transition: visibility 0s ease 0.3s, z-index 0s linear 0.3s;
+    -moz-transition: visibility 0s ease 0.3s, z-index 0s linear 0.3s;
+    -o-transition: visibility 0s ease 0.3s, z-index 0s linear 0.3s;
+    -ms-transition: visibility 0s ease 0.3s, z-index 0s linear 0.3s;
+	transition: visibility 0s ease 0.3s, z-index 0s linear 0.3s, opacity 0.3s ease 0s;
+}
+.popup-scroll.active {
+	visibility: visible;
+	opacity: 1;
+	-webkit-transition: visibility 0s ease 0s, z-index 0s linear 0s;
+    -moz-transition: visibility 0s ease 0s, z-index 0s linear 0s;
+    -o-transition: visibility 0s ease 0s, z-index 0s linear 0s;
+    -ms-transition: visibility 0s ease 0s, z-index 0s linear 0s;
+	transition: visibility 0s ease 0s, z-index 0s linear 0s, opacity 0.3s ease 0.0s;
+}
+.popup-scroll.ps1 {
+	z-index: 981;
+}
+.popup-scroll.ps2 {
+	z-index: 991;
+}
+.popup,
+.popup.form-outer.white {
+	position: relative;
 	display: flex;
 	flex-direction: column;
 	background-color: var(--fair);
 	border: 10px solid white;
 	border-radius: 6px;
-	transform: translate(-50%, -60%);
-	z-index: -10;
-	opacity: 0;
+	transform: translateY(-20%);
 	padding: 42px 50px 46px;
 	color: var(--text);
 	width: 555px;
 	box-sizing: border-box;
-	max-width: 90vw;
-	transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, z-index 0s linear 0.3s;
+	max-width: 99vw;
+	-webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -o-transition: transform 0.3s ease 0s;
+    -ms-transition: transform 0.3s ease 0s;
+	transition: transform 0.3s ease 0s;
 }
-.popup.active,
-.popup.form-outer.white.active {
-	transform: translate(-50%, -50%);
-	z-index: 992;
-	opacity: 1;
-	transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, z-index 0s linear 0s;
-}
-.poptext.active {
-	z-index: 997;
+.popup-scroll.active .popup,
+.popup-scroll.active .popup.form-outer.white {
+	transform: translateY(0%);
+	-webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -o-transition:  transform 0.3s ease 0s;
+    -ms-transition: transform 0.3s ease 0s;
+	transition: transform 0.3s ease 0s;
 }
 .ppd,
 .pcd {
@@ -173,16 +217,21 @@ body.eclipse2 #eclipse2 {
 	position: fixed;
 	top: unset;
 	left: unset;
-	bottom: 48px;
-	right: 48px;
+	bottom: 36px;
+	right: 36px;
 	width: 460px;
 	transform: none;
+	z-index: -10;
+	opacity: 0;
+	transition: opacity 0.3s ease 0s, z-index 0s linear 0.3s;
 }
 .popcookie .btn {
 	width: 164px;
 }
 .popcookie.active {
-	transform: none;
+	opacity: 1;
+	z-index: 1000;
+	transition: opacity 0.3s ease 0s, z-index 0s linear 0s;
 }
 
 body {
@@ -354,6 +403,10 @@ section.white {
 	justify-content: center;
 	align-items: center;
 	border: none;
+	-webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
 	transition: color 0.3s ease;
 }
 .btn {
@@ -383,8 +436,11 @@ section.white {
 	background-image: -webkit-linear-gradient( 90deg, rgb(41,153,169) 0%, rgb(57,211,233) 100%);
 	background-image: -ms-linear-gradient( 90deg, rgb(41,153,169) 0%, rgb(57,211,233) 100%);
 	background-image: linear-gradient( 0deg, rgb(41,153,169) 0%, rgb(57,211,233) 100%);
-	transition: opacity 0.3s ease, background-image 0.3s ease;
 	-webkit-transition: opacity 0.3s ease, background-image 0.3s ease;
+    -moz-transition: opacity 0.3s ease, background-image 0.3s ease;
+    -o-transition: opacity 0.3s ease, background-image 0.3s ease;
+    -ms-transition: opacity 0.3s ease, background-image 0.3s ease;
+	transition: opacity 0.3s ease, background-image 0.3s ease;
 }
 .btn:before {
 	opacity: 1;
@@ -482,10 +538,14 @@ header {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	-webkit-transition: filter 0.3s ease, background-color 0.3s ease;
+    -moz-transition: filter 0.3s ease, background-color 0.3s ease;
+    -o-transition: filter 0.3s ease, background-color 0.3s ease;
+    -ms-transition: filter 0.3s ease, background-color 0.3s ease;
 	transition: filter 0.3s ease, background-color 0.3s ease;
 }
 .top-social:hover {
-	background-color: #33373c;
+	background-color: var(--bg-btn-fair);
 }
 .top-social svg {
 	filter: drop-shadow(0px 7px 43px #2999a92e);
@@ -537,12 +597,16 @@ header .dlist-hover {
 	padding: 0 20px;
 	list-style: none;
 	overflow: hidden;
-	transition: height 0.3s ease;
 	background-color: white;
 	box-shadow: 0px 11px 27px 0px rgba(26, 28, 30, 0.08);
 	border-radius: 6px;
 	width: 263px;
 	box-sizing: border-box;
+	-webkit-transition: height 0.3s ease;
+    -moz-transition: height 0.3s ease;
+    -o-transition: height 0.3s ease;
+    -ms-transition: height 0.3s ease;
+	transition: height 0.3s ease;
 }
 header .dlist-elems {
 	width: 263px;
@@ -591,8 +655,10 @@ header .dlist-elems {
 	width: 24px;
 	height: 24px;
 	border-radius: 12px;
-	background-color: var(--bg-btn);
 	cursor: pointer;
+	/* background-color: var(--bg-btn); */
+	/* transition: background-color 0.3s ease; */
+	background-color: var(--bg-btn-fair);
 }
 .dlist-burger:before {
 	content: "";
@@ -607,8 +673,15 @@ header .dlist-elems {
 	border-color: transparent white white transparent;
 	border-width: 1px;
 	transform: translate(-3px, -4px) rotate(45deg);
+	-webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
 	transition: transform 0.3s ease;
 }
+/* .dlist-hover:hover .dlist-burger {
+	background-color: var(--bg-btn-fair);
+} */
 .dlist-hover:hover .dlist-burger:before {
 	transform: translate(-3px, -2px) rotate(225deg);
 }
@@ -619,12 +692,16 @@ header .dlist-elems {
 	height: 60px;
 	border: 1px solid #ffffff33;
 	border-radius: 6px;
-	background-color: transparent;
+	background-color: #1e2022;
 	font-size: 14px;
 	color: white;
 	font-weight: bold;
-	transition: border-color 0.3s ease;
 	cursor: pointer;
+	-webkit-transition: border-color 0.3s ease;
+    -moz-transition: border-color 0.3s ease;
+    -o-transition: border-color 0.3s ease;
+    -ms-transition: border-color 0.3s ease;
+	transition: border-color 0.3s ease;
 }
 #callback:hover {
 	border-color: var(--main);
@@ -648,11 +725,6 @@ header .dlist-elems {
 }
 #main .wrap {
 	display: flex;
-}
-
-.text {
-	/* display: flex;
-	flex-direction: column; */
 }
 
 #h1-sup {
@@ -839,13 +911,13 @@ form .validate.invalid input[type="text"] {
 	text-align: left;
 	justify-content: flex-start;
 }
-.btn.list:focus {
+/* .btn.list:focus {
 	outline: none;
-}
-.btn.list:focus:before {
+} */
+/* .btn.list:focus:before {
 	outline: -webkit-focus-ring-color auto 1px;;
 	outline-offset: -2px;
-}
+} */
 .btn.list:after,
 .btn.list:after/*,
  #download-price .btn:after*/ { 
@@ -959,6 +1031,7 @@ select:-webkit-autofill:focus {
 	font-size: 16px;
 	-webkit-text-fill-color: white;
 	-webkit-box-shadow: 0 0 0px 1000px var(--bg-btn) inset;
+	-webkit-transition: background-color 5000s ease-in-out 0s;
 	transition: background-color 50000s ease-in-out 0s;
 }
 .ppd {
@@ -969,6 +1042,10 @@ select:-webkit-autofill:focus {
 	font-weight: 500;
 	padding-left: 37px;
 	margin-right: auto;
+	-webkit-transition: color 0.3s ease;
+    -moz-transition: color 0.3s ease;
+    -o-transition: color 0.3s ease;
+    -ms-transition: color 0.3s ease;
 	transition: color 0.3s ease;
 }
 .ppd:hover {
@@ -982,6 +1059,10 @@ form .ppd:after {
 	bottom: 0;
 	height: 1px;
 	background-color: var(--gray);
+	-webkit-transition: background-color 0.3s ease;
+    -moz-transition: background-color 0.3s ease;
+    -o-transition: background-color 0.3s ease;
+    -ms-transition: background-color 0.3s ease;
 	transition: background-color 0.3s ease;
 }
 form .ppd:hover:after {
@@ -1316,11 +1397,30 @@ video {
 	font-size: 16px;
 	-webkit-text-fill-color: var(--text);
 	-webkit-box-shadow: 0 0 0px 1000px var(--fair) inset;
+	-webkit-transition: background-color 50000s ease-in-out 0s;
+	transition: background-color 50000s ease-in-out 0s;
+}
+
+.popup.form-outer.white input:-webkit-autofill,
+.popup.form-outer.white input:-webkit-autofill:hover, 
+.popup.form-outer.white input:-webkit-autofill:focus,
+.popup.form-outer.white textarea:-webkit-autofill,
+.popup.form-outer.white textarea:-webkit-autofill:hover,
+.popup.form-outer.white textarea:-webkit-autofill:focus,
+.popup.form-outer.white select:-webkit-autofill,
+.popup.form-outer.white select:-webkit-autofill:hover,
+.popup.form-outer.white select:-webkit-autofill:focus {
+	background-color: white;
+	border: none;
+	font-size: 14px;
+	-webkit-text-fill-color: var(--text);
+	-webkit-box-shadow: 0 0 0px 1000px white inset;
+	-webkit-transition: background-color 50000s ease-in-out 0s;
 	transition: background-color 50000s ease-in-out 0s;
 }
 
 
-#density-radios {
+.density-radios {
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 30px;
@@ -1573,6 +1673,10 @@ video {
 	opacity: 0;
 	transform: translateX(-200px);
 	visibility: hidden;
+	-webkit-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0s linear 0.3s;
+    -moz-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0s linear 0.3s;
+    -o-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0s linear 0.3s;
+    -ms-transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0s linear 0.3s;
 	transition: transform 0.3s ease 0s, opacity 0.3s ease 0s, visibility 0s linear 0.3s;
 }
 .tg-swtch-elem:nth-child(2) {left: -100%;}
@@ -1586,6 +1690,10 @@ video {
 .tg-swtch-elem.active {
 	opacity: 1;
 	transform: translateX(0);
+	-webkit-transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s, visibility 0s linear 0.3s;
+    -moz-transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s, visibility 0s linear 0.3s;
+    -o-transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s, visibility 0s linear 0.3s;
+    -ms-transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s, visibility 0s linear 0.3s;
 	transition: transform 0.3s ease 0.3s, opacity 0.3s ease 0.3s, visibility 0s linear 0.3s;
 	visibility: visible;
 }
@@ -1611,27 +1719,31 @@ video {
 	cursor: pointer;
 	outline: none;
 }
-.accordion-btn:before {
+.accordion-btn:before,
+.accordion-btn:after  {
 	content: "";
 	position: absolute;
+	background-color: var(--addcolor1);
+	-webkit-transition: transform 0.3s ease;
+    -moz-transition: transform 0.3s ease;
+    -o-transition: transform 0.3s ease;
+    -ms-transition: transform 0.3s ease;
+	transition: transform 0.3s ease;
+}
+.accordion-btn:before {
 	top: calc(50% + 1px);
 	right: 0;
-	background-color: var(--addcolor1);
 	width: 10px;
 	height: 2px;
 	transform: rotate(45deg);
-	transition: transform 0.3s ease;
+
 }
 .accordion-btn:after {
-	content: "";
-	position: absolute;
 	top: calc(50% - 3px);
 	right: 4px;
-	background-color: var(--addcolor1);
 	width: 2px;
 	height: 10px;
 	transform: rotate(45deg);
-	transition: transform 0.3s ease;
 }
 .accordion.hidden .accordion-btn:before {
 	transform: rotate(0deg);
@@ -1641,6 +1753,10 @@ video {
 }
 .accordion-hiding {
 	position: relative;
+	-webkit-transition: height 0.6s ease;
+    -moz-transition: height 0.6s ease;
+    -o-transition: height 0.6s ease;
+    -ms-transition: height 0.6s ease;
 	transition: height 0.6s ease;
 }
 .accordion:after {
@@ -1682,7 +1798,6 @@ video {
 
 
 /*-b-contacts-----------------------------*/
-#contacts {}
 #contacts .decor {
 	top: -324px;
 }

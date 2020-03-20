@@ -19,7 +19,6 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	initForm();
 });
 
-
 function setHeight(parentClass, childsTag) {
 	for (let j = 0; j < parentClass.length; j++) {
 		var totalH = 0;
@@ -109,46 +108,47 @@ function initPopup () {
 	var popups = document.getElementsByClassName("popup");
 	Popup.eclipse.onclick = function() {
 		for (var i = 0; i < popups.length; i++) {
-			popups[i].classList.remove("active");
+			popups[i].parentNode.classList.remove("active");
 		}
 		document.body.classList.remove("eclipse");
 	}
 	Popup.eclipse2.onclick = function() {
 		for (var i = 0; i < poptext.length; i++) {
-			poptext[i].classList.remove("active");
+			poptext[i].parentNode.classList.remove("active");
 		}
 		document.body.classList.remove("eclipse2");
 	}
 
 	for (var i = 0; i < popmsg.length; i++) {
 		popmsg[i].getElementsByClassName("gohome")[0].onclick = function() {
-			this.parentNode.classList.remove("active");
+			this.parentNode.parentNode.classList.remove("active");
 			document.body.classList.remove("eclipse");
 		}
 	}
 	for (var i = 0; i < poptext.length; i++) {
 		poptext[i].getElementsByClassName("close")[0].onclick = function() {
-			this.parentNode.classList.remove("active");
+			this.parentNode.parentNode.classList.remove("active");
 			document.body.classList.remove("eclipse2");
 		}
 	}
+
 
 	var ppd = document.getElementsByClassName("ppd");
 	for (var i = 0; i < ppd.length; i++) {
 		ppd[i].onclick = function() {
 			document.body.classList.add("eclipse2");
-			document.getElementById("p-privacy").classList.add("active");
+			document.getElementById("p-privacy-s").classList.add("active");
 		}
 	}
-
 	var pcd = document.getElementsByClassName("pcd");
 	for (var i = 0; i < pcd.length; i++) {
 		pcd[i].onclick = function() {
-			document.body.classList.add("eclipse");
-			document.getElementById("p-cookie").classList.add("active");
+			document.body.classList.add("eclipse2");
+			document.getElementById("p-cookie-s").classList.add("active");
 		}
 	}
 	
+
 	Popup.cookie.elem = document.getElementById("p-use-cookie");
 	Popup.cookie.accept = Popup.cookie.elem.getElementsByClassName("accept")[0];
 	Popup.cookie.close = Popup.cookie.elem.getElementsByClassName("close")[0];
@@ -166,23 +166,23 @@ function initPopup () {
 
 function openPopComplete() {
 	document.body.classList.add("eclipse");
-	document.getElementById("p-complete").classList.add("active");
+	document.getElementById("p-complete-s").classList.add("active");
 }
 function openPopSended() {
 	document.body.classList.add("eclipse");
-	document.getElementById("p-sended").classList.add("active");
+	document.getElementById("p-sended-s").classList.add("active");
 }
 function openPopSendedLetter() {
 	document.body.classList.add("eclipse");
-	document.getElementById("p-sended-letter").classList.add("active");
+	document.getElementById("p-sended-letter-s").classList.add("active");
 }
 function openPPriceList() {
 	document.body.classList.add("eclipse");
-	document.getElementById("p-price-list").classList.add("active");
+	document.getElementById("p-price-list-s").classList.add("active");
 }
 function openPOrderFree() {
 	document.body.classList.add("eclipse");
-	document.getElementById("p-order-free").classList.add("active");
+	document.getElementById("p-order-free-s").classList.add("active");
 }
 
 
