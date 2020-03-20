@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<!-- Open Graph -->
+	<meta name="og:type" content="website">
+	<meta name="og:title" content="MagicPaper">
+	<meta name="og:description" content="">
+	<meta name="og:url" content="">
+	<meta name="og:site_name" content="MagicPaper">
+	<meta name="og:locale" content="uk_UA">
+	<!-- <meta name="og:image" content="url"> -->
+	<!-- Open Graph -->
+	<!-- <meta name="theme-color" content="#000000"> -->
+	<link rel="shortcut icon" href="./assets/img/fav.svg">
+	<title>MagicPaper</title>
+	<link rel="stylesheet" type="text/css" href="./assets/fonts/gilroy/font.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css?v=0018">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css?v=0018">
+	<!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/cc9d4f44c9/UntitledProject/style.css"> -->
+</head>
+<body>	
+<div id="eclipse"></div>
+<div id="eclipse2"></div>
+
+
+<div id="p-use-cookie" class="popup popcookie">
+	<button type="button" class="close"></button>
+	<div class="h6">Мы используем файлы cookie</div>
+	<p class="h7">Чтобы улучшить работу сайта и предоставить вам больше возможностей для обучения. Продолжая использовать сайт, вы соглашаетесь с условиями использования файлов cookie.</p>
+	<button type="button" class="btn accept"><span>Согласен</span></button>
+</div>
+
+
+<div id="p-privacy" class="popup poptext">
+	<button type="button" class="close"></button>
+	<div class="h3">Политика конфиденциальности</div>
+	<p class="h7">Руководствуясь законом Украины «О защите прав потребителей», мы заботимся о сохранности личной информации каждого пользователя.</p>
+	<p class="h6">Посетители интернет-портала имеют возможность просматривать контент сайта, не сообщая своих персональных данных.</p>
+	<p class="h7">Однако эта информация нам понадобится непосредственно в момент оказания услуг, связанных с покупкой продукции, для подтверждения заказа. Для того чтобы максимально обезопасить пользование сайтом, мы позаботились о должном уровне защиты информации, полученной от пользователей. SSL-шифрование, которое использует наш сервер, обеспечивает более защищенную передачу данных в интернете. Такой протокол безопасного соединения часто применяется сайтами, которые работают с электронными деньгами, паролями и приватной документацией. Если у вас возникнут вопросы о конфиденциальности, напишите нам на электронный адрес с пометкой в теме письма «Персональные данные».</p>
+</div>
+<div id="p-cookie" class="popup poptext">
+	<button type="button" class="close"></button>
+	<div class="h3">Политика куки</div>
+	<p class="h7">Руководствуясь зtаконом Украины «О защите прав потребителей», мы заботимся о сохранности личной информации каждого пользователя.</p>
+	<p class="h6">Посетители интернет-портала имеют возможность просматривать контент сайта, не сообщая своих персональных данных.</p>
+	<p class="h7">Однако эта информация нам понадобится непосредственно в момент оказания услуг, связанных с покупкой продукции, для подтверждения заказа. Для того чтобы максимально обезопасить пользование сайтом, мы позаботились о должном уровне защиты информации, полученной от пользователей. SSL-шифрование, которое использует наш сервер, обеспечивает более защищенную передачу данных в интернете. Такой протокол безопасного соединения часто применяется сайтами, которые работают с электронными деньгами, паролями и приватной документацией. Если у вас возникнут вопросы о конфиденциальности, напишите нам на электронный адрес с пометкой в теме письма «Персональные данные».</p>
+</div>
+
+
+<div id="p-complete" class="popup popmsg">
+	<div class="h3">Готово</div>
+	<p class="h5">Прайс-лист будет загружен на ваше устройство</p>
+	<button type="button" class="btn gohome"><span>На главную</span></button>
+</div>
+<div id="p-sendedletter" class="popup popmsg">
+	<div class="h3">Заявка отправлена</div>
+	<p class="h5">Наш менеджер свяжеться с вами в ближайшее время</p>
+	<button type="button" class="btn gohome"><span>На главную</span></button>
+</div>
+<div id="p-sended" class="popup popmsg">
+	<div class="h3">Заявка отправлена</div>
+	<p class="h5">Наш менеджер свяжеться с вами в ближайшее время</p>
+	<button type="button" class="btn gohome"><span>На главную</span></button>
+</div>
+
+<div id="p-price-list" class="popup form-outer white">
+	<div class="h5">Заполните форму и получите прайс-лист</div>
+	<form id="get-price-top" action="" method="GET">
+		<input type="text" name="name" placeholder="Как к вам обращаться?">
+		<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+		<button class="btn" type="submit"><span>Скачать прайс-лист</span></button>
+		<label class="checkbox-outer">
+			<div>Вы согласны с условиями</div>
+			<input type="checkbox" checked name="pdpc">
+			<span class="checkmark"></span>
+		</label>
+		<button type="button" class="ppd">обработки персональных данных</button>
+	</form>
+</div>
+<div id="p-order-free" class="popup form-outer white">
+	<div class="h5">Заполните форму и получите прайс-лист</div>
+	<form id="get-oder-free" action="" method="GET">
+		<input type="text" name="name" placeholder="Как к вам обращаться?">
+		<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+		<input type="text" name="addres" placeholder="Город и отделение Новой Почты">
+		<div class="form-radio-title">Какая плотность бумаги вам нужна?</div>
+		<div id="density-radios">
+			<label class="density-radio">
+				<input type="checkbox" name="dens100" value="1" checked>
+				<div class="btna"><span>100</span></div>
+			</label>
+			<label class="density-radio">
+				<input type="checkbox" name="dens80" value="1">
+				<div class="btna"><span>80</span></div>
+			</label>
+			<label class="density-radio">
+				<input type="checkbox" name="dens65" value="1">
+				<div class="btna"><span>65</span></div>
+			</label>
+			<label class="density-radio">
+				<input type="checkbox" name="dens50" value="1">
+				<div class="btna"><span>50</span></div>
+			</label>
+		</div>
+		<button class="btn" type="submit"><span>Заказать образцы</span></button>
+		<div class="flex">
+			<label class="checkbox-outer">
+				<div>Вы согласны с условиями</div>
+				<input type="checkbox" checked name="pdpc">
+				<span class="checkmark"></span>
+			</label>
+			<button type="button" class="ppd">обработки персональных данных</button>
+		</div>
+	</form>
+</div>
+
+
+
+<header class="wrap">
+	<div id="header-left">
+		<a href="" class="logo">
+			<img src="./assets/img/logo.png">
+		</a>
+		<div class="logo-text">Сублимационная бумага в рулонах</div>
+		<div id="top-socials">
+			<a href="tg://resolve?domain=username" class="top-social">
+				<svg class="svg-telegram" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>
+			</a>
+			<a href="viber://chat/?number=%2B380676262527" class="top-social">
+				<svg class="svg-viber" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m23.155 13.893c.716-6.027-.344-9.832-2.256-11.553l.001-.001c-3.086-2.939-13.508-3.374-17.2.132-1.658 1.715-2.242 4.232-2.306 7.348-.064 3.117-.14 8.956 5.301 10.54h.005l-.005 2.419s-.037.98.589 1.177c.716.232 1.04-.223 3.267-2.883 3.724.323 6.584-.417 6.909-.525.752-.252 5.007-.815 5.695-6.654zm-12.237 5.477s-2.357 2.939-3.09 3.702c-.24.248-.503.225-.499-.267 0-.323.018-4.016.018-4.016-4.613-1.322-4.341-6.294-4.291-8.895.05-2.602.526-4.733 1.93-6.168 3.239-3.037 12.376-2.358 14.704-.17 2.846 2.523 1.833 9.651 1.839 9.894-.585 4.874-4.033 5.183-4.667 5.394-.271.09-2.786.737-5.944.526z"/><path d="m12.222 4.297c-.385 0-.385.6 0 .605 2.987.023 5.447 2.105 5.474 5.924 0 .403.59.398.585-.005h-.001c-.032-4.115-2.718-6.501-6.058-6.524z"/><path d="m16.151 10.193c-.009.398.58.417.585.014.049-2.269-1.35-4.138-3.979-4.335-.385-.028-.425.577-.041.605 2.28.173 3.481 1.729 3.435 3.716z"/><path d="m15.521 12.774c-.494-.286-.997-.108-1.205.173l-.435.563c-.221.286-.634.248-.634.248-3.014-.797-3.82-3.951-3.82-3.951s-.037-.427.239-.656l.544-.45c.272-.216.444-.736.167-1.247-.74-1.337-1.237-1.798-1.49-2.152-.266-.333-.666-.408-1.082-.183h-.009c-.865.506-1.812 1.453-1.509 2.428.517 1.028 1.467 4.305 4.495 6.781 1.423 1.171 3.675 2.371 4.631 2.648l.009.014c.942.314 1.858-.67 2.347-1.561v-.007c.217-.431.145-.839-.172-1.106-.562-.548-1.41-1.153-2.076-1.542z"/><path d="m13.169 8.104c.961.056 1.427.558 1.477 1.589.018.403.603.375.585-.028-.064-1.346-.766-2.096-2.03-2.166-.385-.023-.421.582-.032.605z"/></svg>
+			</a>
+		</div>
+	</div>
+	<div id="header-right">
+		<div class="dlist-outer">
+			<a href="tel:+380734174813">+38 (073) 417 48 13</a>
+			<div class="dlist-hover">
+				<button type="button" class="dlist-burger"></button>
+				<ul class="dlist-elems">
+					<li class="dlist-elem"><a href="tel:+380734174813">+38 (073) 417 48 13</a></li>
+					<li class="dlist-elem"><a href="tel:+380734174814">+38 (073) 417 48 14</a></li>
+					<li class="dlist-elem"><a href="tel:+380734174815">+38 (073) 417 48 15</a></li>
+				</ul>
+			</div>
+		</div>
+		<button id="callback"><span>Вам</span> перезвонить?</button>
+	</div>
+</header>
+<section id="main">
+	<div class="bg"></div>
+	<div class="wrap">
+		<div class="text">
+			<div id="h1-sup">Официальный импортер</div>
+			<h1>Сублимационная бумага в рулонах</h1>
+			<button class="btn mobile list" onclick="openPPriceList()"><span>Скачать прайс-лист</span></button>
+			<div id="main-descr">
+				<div class="circle-descr">
+					<div class="circle-descr-img">
+						<svg class="svg-cupon" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+							<defs>
+								<linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+									<stop offset="0%" style="stop-color:#2999a9;stop-opacity:1" />
+									<stop offset="100%" style="stop-color:#39d3e9;stop-opacity:1" />
+								</linearGradient>
+							  </defs>
+							<g fill="url(#grad1)" fill-rule="nonzero"><path d="m19.656 40.537c-3.5760019-1.4877911-7.6810187.205021-9.1688363 3.7810119-1.48781758 3.5759908.2049642 7.6810202 3.780944 9.1688643 3.5759799 1.487844 7.6810218-.2049074 9.1688923-3.7808762 1.4837245-3.5760492-.2078823-7.6782294-3.781-9.169zm1.934 8.4c-.9210165 2.2070888-3.2728365 3.4562374-5.617204 2.9835286-2.3443674-.4727087-4.0283568-2.5356216-4.0221239-4.9271637.0062328-2.391542 1.700952-4.4456493 4.0477515-4.9061319 2.3467995-.4604827 4.6920766.8009075 5.6015764 3.012767.5096941 1.2292641.5060929 2.6114087-.01 3.838z" /><path d="m57 0h-54c-1.65685425 0-3 1.34314575-3 3v24c0 1.6568542 1.34314575 3 3 3h16.834l2.083 5.005c-.4440626-.187429-.8980789-.3503407-1.36-.488-6.8038574-1.9912982-13.94864018 1.8357664-16.06103355 8.6030064-2.11239336 6.7672401 1.5865659 13.9791778 8.31503355 16.2119936 1.29905.4419249 2.661838.6675923 4.034.668 5.282038-.0535815 10.0373612-3.2120409 12.135-8.06 2.0964938 4.8498201 6.8536828 8.0089981 12.137 8.06 1.372278.0000184 2.7353033-.224619 4.035-.665 4.5161158-1.5015696 7.85073-5.3509019 8.6931223-10.0349588.8423922-4.6840568-.9421063-9.4540229-4.6520715-12.4349911s-8.7523047-3.6963869-13.1450508-1.8650501l2.082-5h18.87c1.6568542 0 3-1.3431458 3-3v-24c0-1.65685425-1.3431458-3-3-3zm-22.973 34.649c-1.1026497-1.9435646-3.3805445-2.8949496-5.538-2.313l10.971-26.336c2.9893717 1.78081205 4.2149874 5.4883419 2.876 8.7zm-8.908.575-.009.015-.464 1.117-2.646-6.356h5.293zm-11.666 22.214c-5.11630882-1.7239491-8.22521426-6.9061584-7.33803613-12.231713s5.50816163-9.2200504 10.90703613-9.192287c1.0077433-.0018061 2.010536.1409322 2.978.423 1.6094002.4585754 3.0909825 1.2830457 4.329 2.409.2406065.2206329.5737594.3099339.8924602.2392222.3187009-.0707118.5828235-.2925333.7075398-.5942222l.649-1.558.393-.944c.6700614-1.4799925 2.3964708-2.1576845 3.8943908-1.5287206 1.4979201.6289639 2.2229965 2.336014 1.6356092 3.8507206l-5.254 12.615c-2.1808711 5.4502172-8.1999368 8.2917538-13.794 6.512zm24.507-21c5.7239133-1.6422625 11.7153757 1.5685369 13.5177068 7.244082 1.8023312 5.6755451-1.238974 11.7547982-6.8616756 13.7157767s-11.7849516-.9084343-13.9030312-6.4738587l-.649-1.563 3.9-9.36.87-2.089c.9578864-.6526284 2.012902-1.1497615 3.126-1.473zm20.04-9.438c0 .5522847-.4477153 1-1 1h-18.036l5.219-12.529c1.7206803-4.1314178.1442516-8.89947569-3.7-11.191-.494127-.29450407-1.0917108-.36017262-1.638-.18-.5576405.18106198-1.0093013.59514511-1.238 1.135l-9.48 22.765h-25.127c-.55228475 0-1-.4477153-1-1v-24c0-.55228475.44771525-1 1-1h25v1c0 .55228475.4477153 1 1 1s1-.44771525 1-1v-1h27c.5522847 0 1 .44771525 1 1z"/><path d="m29.727 37.161c-.5098487-.2120688-1.0950855.0292533-1.307272.5390531-.2121865.5097997.0290005 1.0950922.5387513 1.3073964.5097507.2123042 1.0950989-.0287478 1.3075207-.5384495.1020714-.2449181.1026212-.5203616.0018283-.7656852-.1010928-.2453236-.2955396-.4404131-.5405283-.5423148z"/><path d="m38.323 53.5c3.0931634 1.276832 6.6575265.1907656 8.5131271-2.5939617 1.8556005-2.7847273 1.4855839-6.4924642-.8837479-8.855561-2.3693318-2.3630967-6.0780309-2.723342-8.8578589-.86041-2.7798281 1.862932-3.8564985 5.4301446-2.5715203 8.5199327.7139409 1.7172751 2.0808495 3.0805867 3.8 3.79zm-1.962-8.4c.9112563-2.2117373 3.2579992-3.4717403 5.6050023-3.0094133 2.3470032.462327 4.0405621 2.5182131 4.0449261 4.9103149s-1.6816824 4.4541535-4.026983 4.9250409c-2.3453007.4708873-4.6966253-.7805448-5.6159454-2.9889425-.5146308-1.2267469-.5171514-2.6083836-.007-3.837z"/><path d="m29 6c-.5522847 0-1 .44771525-1 1v1c0 .55228475.4477153 1 1 1s1-.44771525 1-1v-1c0-.55228475-.4477153-1-1-1z"/><path d="m29 11c-.5522847 0-1 .4477153-1 1v1c0 .5522847.4477153 1 1 1s1-.4477153 1-1v-1c0-.5522847-.4477153-1-1-1z"/><path d="m29 16c-.5522847 0-1 .4477153-1 1v1c0 .5522847.4477153 1 1 1s1-.4477153 1-1v-1c0-.5522847-.4477153-1-1-1z"/></g>
+						</svg>
+					</div>
+					<div class="circle-descr-text">
+						<div class="circle-descr-title">Режим под любай размер</div>
+						<div class="circle-descr-descr">Отправим бумагу необходимого размера с шириной рулона &lt;
+							1,6м</div>
+					</div>
+				</div>
+				<div class="circle-descr">
+					<div class="circle-descr-img">
+						<svg class="svg-timer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><g fill="url(#grad1)"><path d="M406.2,156.4l10.5-12.2l10.2,8.8c1.4,1.2,3.1,1.8,4.9,1.8c0.2,0,0.4,0,0.6,0c2-0.2,3.9-1.1,5.2-2.6l16.2-18.9 c2.7-3.2,2.4-7.9-0.8-10.6l-55.8-47.9c-1.5-1.3-3.5-2-5.5-1.8c-2,0.1-3.9,1.1-5.2,2.6l-16.2,18.9c-2.7,3.2-2.4,7.9,0.8,10.6 l10.2,8.8l-11.3,13.1c-23.1-14.7-49.4-24.9-77.5-29.3V74.9h26c12.1,0,22-9.9,22-22V35.3c0-12.1-9.9-22-22-22H205.1 c-12.1,0-22,9.9-22,22v17.6c0,12.1,9.9,22,22,22h26v22.8c-28.7,4.4-55.5,14.9-78.9,30.1l-12-14l10.2-8.8c1.5-1.3,2.5-3.2,2.6-5.2 c0.1-2-0.5-4-1.8-5.5L135,75.6c-2.7-3.2-7.5-3.5-10.6-0.8l-55.7,47.9c-1.5,1.3-2.5,3.2-2.6,5.2c-0.1,2,0.5,4,1.8,5.5L84,152.2 c1.5,1.7,3.6,2.6,5.7,2.6c1.7,0,3.5-0.6,4.9-1.8l10.2-8.8l11.5,13.3c-9.9,10.3-18.7,21.7-26.3,34c-0.3,0-0.5,0-0.8,0l-7.6,15.1 c-4,7.9-7.4,16.1-10.4,24.5l-4.6,15.1c-2.7,10.5-4.6,21.3-5.6,32.3l-0.8,15.1c0,1.1,0,2.3,0,3.4c0,9.8,0.7,19.5,2.1,28.9l2.8,15.1 c1.9,8.4,4.3,16.6,7.1,24.5l6.2,15.1c31.8,69.6,102.1,118,183.5,118c29.7,0,62.2-9.8,66-11c42.9-13.3,76.5-47.9,76.5-47.9 s-10.7-10.7-10.7-10.7l0,0c0,0-34.6,30.1-70.4,44.2c0,0-27,10.3-61.4,10.3C159,483.6,75.3,399.9,75.3,297 c0-102.9,83.7-186.6,186.6-186.6c49.8,0,95.1,19.6,128.6,51.5c0.1,0.1,0.1,0.1,0.2,0.2c35.6,34,57.8,81.9,57.8,134.8 c0,49.9-19.4,96.8-54.8,132c-3,2.9-3,7.7,0,10.7c2.9,3,7.7,3,10.7,0c38.2-38.1,59.2-88.8,59.2-142.7c0-24.2-4.4-43.3-7.3-53.8 C444.5,201.2,421.4,172.2,406.2,156.4z M393.1,91.1l44.3,38.1l-6.4,7.4l-44.3-38.1L393.1,91.1z M392.8,123.7l12.4,10.7l-10,11.6 c-4.1-3.6-8.3-7.1-12.7-10.4L392.8,123.7z M228.4,59.8V28.4h12.2v31.4H228.4z M255.7,28.4h12.2v31.4h-12.2V28.4z M283,59.8V28.4 h12.2v31.4H283z M325.5,35.3v17.6c0,3.8-3.1,6.9-6.9,6.9h-8.2V28.4h8.2C322.4,28.4,325.5,31.5,325.5,35.3z M198.2,52.9V35.3 c0-3.8,3.1-6.9,6.9-6.9h8.2v31.4h-8.2C201.3,59.8,198.2,56.7,198.2,52.9L198.2,52.9z M90.5,136.6l-6.4-7.4l44.3-38.1l6.4,7.4 l-10.2,8.8c0,0,0,0,0,0l-23.9,20.5c0,0,0,0,0,0L90.5,136.6z M116.5,134.2l12.2-10.5l11.1,12.9c-4.4,3.3-8.6,6.8-12.6,10.5 l-10.9-12.7L116.5,134.2z M246.2,96V74.9h31.2V96c-5.2-0.4-10.4-0.6-15.6-0.6S251.4,95.6,246.2,96L246.2,96z"/><path d="M229.8,143.5c-10.6,1.5-25.3,4.9-41.3,12.7c-44.7,22-77.4,69.5-84,120.2c-11.3,86.8,50.1,166.6,136.9,177.9 c6.9,0.9,13.8,1.3,20.6,1.3c78.5,0,146.9-58.4,157.3-138.2c5.5-42-5.7-83.7-31.6-117.3c-25.9-33.6-63.2-55.1-105.3-60.6 c-8.6-1.1-21.6-2.1-37.2-0.5c-34.4,3.5-56.8,17.1-56.7,17.1c0,0.1,17.2-10.2,27.7-3.6c3,1.9,4.9,6.5,9.2,5.4 c9.5-2.5,19.2-4,28.9-4.5v19.8c0,4.2,3.4,7.5,7.5,7.5s7.5-3.4,7.5-7.5v-19.8c3.7,0.2,7.3,0.5,11,1c29.4,3.8,56.3,16.3,77.8,35.9 l-13.7,13.7c-2.9,2.9-2.9,7.7,0,10.7c1.5,1.5,3.4,2.2,5.3,2.2c1.9,0,3.9-0.7,5.3-2.2l13.6-13.6c2.4,2.7,4.7,5.4,6.9,8.3 c18.1,23.5,28.2,51.3,29.6,80.2h-18.7c-4.2,0-7.5,3.4-7.5,7.5c0,4.2,3.4,7.5,7.5,7.5h18.7c-0.2,3.6-0.5,7.2-1,10.8 c-3.9,29.8-16.7,56.4-35.5,77.2l-12.9-12.9c-2.9-2.9-7.7-2.9-10.7,0s-2.9,7.7,0,10.7l12.9,12.9c-23.8,21.5-54.6,34.9-87.8,36.9 v-18.5c0-4.2-3.4-7.5-7.5-7.5s-7.5,3.4-7.5,7.5v18.5c-4-0.2-7.9-0.5-12-1c-29.5-3.8-55.8-16.5-76.5-34.9l13.4-13.4 c2.9-2.9,2.9-7.7,0-10.7s-7.7-2.9-10.7,0L156,394c-21.8-23.8-35.5-54.8-37.5-88.3H138c4.2,0,7.5-3.4,7.5-7.5c0-4.2-3.4-7.5-7.5-7.5 h-19.7c0.2-4,0.5-8.1,1.1-12.1c3.8-29,16.3-55.8,35.3-77.1l14.1,14.1c1.5,1.5,3.4,2.2,5.3,2.2s3.9-0.7,5.3-2.2 c2.9-2.9,2.9-7.7,0-10.7l-14.1-14.1c7.1-6.4,17-14.2,30.1-21c11.2-5.9,21.6-9.4,30-11.6C226.8,153.2,228.3,148.4,229.8,143.5z"/><path d="M261.8,227.8c-4.2,0-7.5,3.4-7.5,7.5v44.8c-6.4,2.9-10.9,9.4-10.9,16.9c0,10.2,8.3,18.5,18.5,18.5c2.8,0,5.4-0.6,7.8-1.8 l50.4,50.4c1.5,1.5,3.4,2.2,5.3,2.2c1.9,0,3.9-0.7,5.3-2.2c2.9-2.9,2.9-7.7,0-10.7l-51.1-51.1c0.5-1.7,0.8-3.4,0.8-5.3 c0-7.5-4.5-14-10.9-16.9v-44.8C269.4,231.2,266,227.8,261.8,227.8L261.8,227.8z M258.5,297c0-1.9,1.5-3.4,3.4-3.4 c1.9,0,3.4,1.5,3.4,3.4c0,1.9-1.5,3.4-3.4,3.4C260,300.4,258.5,298.9,258.5,297z"/><path d="M400.5,437.8"/></g></svg>
+					</div>
+					<div class="circle-descr-text">
+						<div class="circle-descr-title">Отгружаем в день заказа</div>
+						<div class="circle-descr-descr">Обработка и отправка заказа за 1 день</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form-outer">
+			<div class="form-bg"></div>
+			<div class="form-title">Скачайте полный прайс-лист</div>
+			<form id="get-price-top" action="" method="GET">
+				<input type="text" name="name" placeholder="Как к вам обращаться?">
+				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+				<button class="btn list" type="submit"><span>Скачать прайс-лист</span></button>
+				<label class="checkbox-outer">
+					<div>Вы согласны с условиями</div>
+					<input type="checkbox" checked name="pdpc">
+					<span class="checkmark"></span>
+				</label>
+				<button type="button" class="ppd">обработки персональных данных</button>
+			</form>
+		</div>
+	</div>
+</section>
+<section class="decor-outer" id="in-stock">
+	<div class="decor">
+		<div class="decor-bg"></div>
+		<div class="wrap">
+			<div class="text">
+				<h2>Всегда в наличии <br>4 плотности бумаги</h2>
+				<p class="h3">Покрываем 95% потребностей наших клиентов</p>
+				<hr>
+				<p>Для плотности 100 г/м2 доступно <br>2 ширины рулона: 1,6 м. и 1,12 м. <br>Для всех остальных - 1,6 м, с порезкой под необходимый размер</p>
+			</div>
+			<div id="density-elems">
+				<div class="density-elem btna active">
+					<div class="density-val">100</div>
+					<div class="density-recomend">Рекомендуем<span class="mobile">ый размер</span></div>
+				</div>
+				<div class="density-elem btna">
+					<div class="density-val">80</div>
+				</div>
+				<div class="density-elem btna">
+					<div class="density-val">65</div>
+				</div>
+				<div class="density-elem btna">
+					<div class="density-val">50</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="white" id="width">
+	<div class="bg"></div>
+	<div class="wrap">
+		<div class="text">
+			<div id="width-img-title">1,6 <span>метра</span></div>
+			<p class="h3">Ширина рулона для всех плотностей</p>
+		</div>
+		<div class="text">
+			<h2>Если вам нужна ширина меньше чем 1,6 метра</h2>
+			<p class="h3">Мы сделаем качественную порезку под необходимый размер</p>
+			<hr>
+			<p>За счет использования высокоточного оборудования для порезки бумаги, нет проблем с образованием пыли на ней. Можете не волноваться о поломке вашего устройства по этой причине.</p>
+		</div>
+	</div>
+</section>
+<section id="download-price">
+	<div class="bg"></div>
+	<div class="wrap">
+		<div class="text">
+			<h2>Скачайте прайс-лист продукции</h2>
+			<ul>
+				<li>Узнайте цены всех плотностей для регулярной закупки бумаги</li>
+				<li>Узнайте все возможности сублиционной бумаги и ее особенности</li>
+			</ul>
+		</div>
+		<div class="form-outer" id="anchor-download-price">
+			<div class="form-bg"></div>
+			<form id="get-price" action="" method="GET">
+				<input type="text" name="name" placeholder="Как к вам обращаться?">
+				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+				<button class="btn list" type="submit"><span>Скачать прайс-лист</span></button>
+				<label class="checkbox-outer">
+					<div>Вы согласны с условиями</div>
+					<input type="checkbox" checked name="pdpc">
+					<span class="checkmark"></span>
+				</label>
+				<button type="button" class="ppd">обработки персональных данных</button>
+			</form>
+		</div>
+	</div>
+</section>
+<section id="behavior" class="white">
+	<div class="wrap">
+		<div class="grid">
+			<h2>Как наша бумага ведет себя при печати?</h2>
+			<p class="h3"> Протестировав разные образцы бумаги более чем от 10 заводов изготовителей мы пришли к выводу, что определяющим фактором в качестве бумаги являеться её 2-х компонентная основа
+			</p>
+			<div class="circle-descr-outer">
+				<div class="circle-descr">
+					<div class="circle-descr-img">
+						<svg class="svg-printer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 508 508" fill="url(#grad1)">
+							<path d="M417.9,114.7V0H90.1v114.7H0v278.6h90.1V508h327.7V393.3H508V114.7H417.9z M106.5,16.4h295v98.3h-24.6V41H131.1v73.7 h-24.6V16.4z M360.5,57.4v57.3h-213V57.4H360.5z M401.5,491.6L401.5,491.6h-295V295h24.6v147.5h245.8V295h24.6V491.6z M311.6,333.3l48.9,62.8v30H245.3L311.6,333.3z M225.2,426h-27.82l48.22-60.3l11.6,15.5L225.2,426z M311.1,305.8l-43.8,61.4 L246,338.9L176.3,426h-28.8V295h213v74.4L311.1,305.8z M417.9,376.9v-98.3h-41H131.1h-41v98.3H16.4V131.1h73.7h327.7h73.7v245.8 H417.9z"/>
+							<rect x="442.5" y="163.9" width="16.4" height="16.4"/>
+							<rect x="409.7" y="163.9" width="16.4" height="16.4"/>
+							<rect x="376.9" y="163.9" width="16.4" height="16.4"/>
+							<path d="M192.5,311.3c-15.8,0-28.7,12.9-28.7,28.7c0,15.8,12.9,28.7,28.7,28.7s28.7-12.9,28.7-28.7 C221.2,324.2,208.3,311.3,192.5,311.3z M192.5,352.3c-6.8,0-12.3-5.5-12.3-12.3s5.6-12.3,12.3-12.3c6.8,0,12.3,5.5,12.3,12.3 S199.3,352.3,192.5,352.3z"/>
+							<rect x="172.1" y="81.9" width="163.9" height="16.4"/>
+							</svg>
+					</div>
+					<div class="circle-descr-text">
+						<div class="circle-descr-descr">Благодаря основе бумага не коробится и не мнется при печати.
+						</div>
+					</div>
+				</div>
+				<div class="circle-descr">
+					<div class="circle-descr-img">
+						<svg class="svg-rain" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 507.9 507.9" fill="url(#grad1)">
+							<path d="M412,136.75c0,0-33.2,41.6-58.4,81.5c-38.8-70.7-99.6-147-99.6-147s-60.8,76.3-99.6,147c-25.2-39.9-58.4-81.5-58.4-81.5 S0,257.15,0,307.85c0,52.9,43,96,95.9,96c19.8,0,39-6.1,55.1-17.4c24,30.5,61.2,50.2,102.9,50.2s78.9-19.7,102.9-50.2 c16,11.3,35.3,17.4,55.1,17.4c52.9,0,96-43.1,96-96C508,257.15,412,136.75,412,136.75z M95.9,387.55c-43.9,0-79.6-35.7-79.6-79.6 c0-34.4,52.5-109.6,79.5-144.7c10.3,13.5,31.3,41.7,49.2,71.1c-14.9,30.1-22.2,53.4-22.2,71.3c0,24,6.4,47.1,18.7,67.5 C128.3,382.45,112.3,387.55,95.9,387.55z M254,420.25c-63.3,0-114.7-51.5-114.7-114.7c0-55.6,89.7-175.6,114.7-207.9 c25,32.4,114.7,152.4,114.7,207.9C368.7,368.85,317.3,420.25,254,420.25z M412,387.55c-16.4,0-32.3-5.1-45.6-14.4 c12.3-20.4,18.7-43.6,18.7-67.5c0-17.8-7.3-41.2-22.2-71.3c17.8-29.4,38.8-57.7,49.1-71.1c27,35.1,79.6,110.3,79.6,144.7 C491.6,351.75,455.9,387.55,412,387.55z"/>
+							<path d="M180.3,305.55h-16.4c0,49.7,40.4,90.1,90.1,90.1v-16.4C213.3,379.35,180.3,346.25,180.3,305.55z"/>
+							</svg>							
+					</div>
+					<div class="circle-descr-text">
+						<div class="circle-descr-descr">Покрытие не дает краске растекаться и сохраняет ее в нужной пропорции, для качественной передачи изображения на текстильную поверхность</div>
+					</div>
+				</div>
+			</div>
+			<video autoplay loop muted>
+				<source type="video/mp4" src="./assets/video/flower.mp4">
+			</video>
+		</div>
+		<div id="uninterrupted-supplier">
+			<div id="pallet-img">
+				<img src="./assets/img/pallet.png">
+			</div>
+			<div id="uninterrupted-text">
+				<div class="dlogo"></div>
+				<p class="h3">Ваш бесперебойный поставщик сублимационной бумаги</p>
+				<hr>
+				<p>Мы создаем максимально удобные условия для сотрудничества на длительный срок</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="decor-outer" id="order-free">
+	<div class="decor">
+		<div class="decor-bg"></div>
+		<div class="wrap">
+			<div class="text">
+				<h2>Закажите бесплатные образцы бумаги</h2>
+				<p class="h3">Убедитесь в превосходном качестве бумаги лично</p>
+				<hr class="mobile">
+				<p>Бесплатно отправим образцы бумаги в ваш город. Укажите ваши контактные данные и необходимую плотность</p>
+			</div>
+			<button type="button" class="btn mobile" id="open-order-free"><span>Заказать образцы</span></button>
+			<div class="form-outer white">
+				<form id="get-oder-free" action="" method="GET">
+					<input type="text" name="name" placeholder="Как к вам обращаться?">
+					<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+					<input type="text" name="addres" placeholder="Город и отделение Новой Почты">
+					<div class="form-radio-title">Какая плотность бумаги вам нужна?</div>
+					<div id="density-radios">
+						<label class="density-radio">
+							<input type="checkbox" name="dens100" value="1" checked>
+							<div class="btna"><span>100</span></div>
+						</label>
+						<label class="density-radio">
+							<input type="checkbox" name="dens80" value="1">
+							<div class="btna"><span>80</span></div>
+						</label>
+						<label class="density-radio">
+							<input type="checkbox" name="dens65" value="1">
+							<div class="btna"><span>65</span></div>
+						</label>
+						<label class="density-radio">
+							<input type="checkbox" name="dens50" value="1">
+							<div class="btna"><span>50</span></div>
+						</label>
+					</div>
+					<button class="btn" type="submit"><span>Заказать образцы</span></button>
+					<div class="flex">
+						<label class="checkbox-outer">
+							<div>Вы согласны с условиями</div>
+							<input type="checkbox" checked name="pdpc">
+							<span class="checkmark"></span>
+						</label>
+						<button type="button" class="ppd">обработки персональных данных</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<section id="shipment">
+	<div class="bg"></div>
+	<div class="wrap">
+		<h2>Отгрузка происходит в день оформления заказа</h2>
+		<div id="shipment-circle"></div>
+		<p class="h3">Мы знаем, что оперативность и скорость доставки очень важна для наших клиентов</p>
+	</div>
+</section>
+<section class="decor-outer" id="owner">
+	<div class="decor">
+		<div class="decor-bg"></div>
+		<div class="wrap">
+			<p class="h3">Мы первые в Украине, кто занялись полным циклом сублимационной печати, от поставок техники до тестирования различных расходных материалов.</p>
+			<hr class="mobile">
+			<p>У нас есть своё оборудование на котором мы проверяем и тестируем каждую партию, чтобы отправлять клиентам исключительно качественный продукт, а не кота в мешке.</p>
+			<div class="text">
+				<h2>Павел Сирота</h2>
+				<p>Собственник компании</p>
+			</div>
+			<div id="owner-duration">
+				<div id="owner-duration-num">10 <span>лет</span></div>
+				<p>На рынке сублимационной печати</p>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="white" id="faq">
+	<div class="wrap">
+		<div class="text">
+			<h2>Популярные вопросы</h2>
+			<div id="faq-adapt">
+				<p class="h3">Мы подготовили ответы на самые популярные вопросы наших клиентов</p>
+				<div class="tg-swtch-btns">
+					<button class="btna th-swtch-btn tg-btn-faq active" type="button"><span>О продукте</span></button>
+					<button class="btna th-swtch-btn tg-btn-faq" type="button"><span>О доставке</span></button>
+				</div>
+			</div>
+			<div class="tg-swtch-elems">
+				<!---->
+				<div class="tg-swtch-elem tg-el-faq active">
+					<div class="accordion hidden">
+						<button class="accordion-btn">Как определить необходимую плотность?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">Вы предоставляете услуги печати?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">Сколько стоит один метр вашей продукции?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">Как узнать необходимую мне длинну?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">Условия хранения</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+				</div>
+				<!---->
+				<div class="tg-swtch-elem tg-el-faq">
+					<div class="accordion hidden">
+						<button class="accordion-btn">Lorem ipsum dolor sit amet?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">consectetur adipiscing elit?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">sed do eiusmod tempor incididunt ut?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">labore et dolore magna aliqua?</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+					<div class="accordion hidden">
+						<button class="accordion-btn">Ut enim ad minim veniam</button>
+						<div class="accordion-hiding">
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+				</div>
+				<!---->
+			</div>
+		</div>
+
+		<div class="form-outer white">
+			<form id="get-consulting" action="" method="GET">
+				<div class="form-title">Заявка на консультацию</div>
+				<div class="form-text">Оставьте заявку и наш менеджер свяжемся с вами в ближайшее время</div>
+				<input type="text" name="name" placeholder="Как к вам обращаться?">
+				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+				<button class="btn" type="submit"><span>Создать заявку</span></button>
+				<div class="mflex">
+					<label class="checkbox-outer">
+						<div>Вы согласны с условиями</div>
+						<input type="checkbox" checked name="pdpc">
+						<span class="checkmark"></span>
+					</label>
+					<button type="button" class="ppd">обработки персональных данных</button>
+				</div>
+			</form>
+		</div>
+	</div>
+</section>
+
+<section class="decor-outer" id="contacts">
+	<div class="decor">
+		<div class="decor-bg"></div>
+		<div class="wrap">
+			<div class="text">
+				<h2>Наши контакты</h2>
+				<address class="contact-elem">
+					<span>Главный офис</span>
+					<span>м. Харків, вул Дарвіна, 20</span>
+				</address>
+				<div class="contact-elem">
+					<span>Номер телефона</span>
+					<a href="tel:+380676262527">+38 (067) 62 62 527</a>
+				</div>
+				<div class="contact-elem">
+					<span>E-mail</span>
+					<a target="_blank" href="mailto:manager@magicpaper.com.ua">manager@magicpaper.com.ua</a>
+				</div>
+				<div class="contacts-row">
+					<a class="btna" href="" class="facebook">
+						<svg class="svg-facebook" viewBox="128 0 256 512" xmlns="http://www.w3.org/2000/svg"><path d="M288,176v-64c0-17.664,14.336-32,32-32h32V0h-64c-53.024,0-96,42.976-96,96v80h-64v80h64v256h96V256h64l32-80H288z"/></svg>
+					</a>
+					<a class="btna" href="tg://resolve?domain=username" class="telegram">
+						<svg class="svg-telegram" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.417 15.181-.397 5.584c.568 0 .814-.244 1.109-.537l2.663-2.545 5.518 4.041c1.012.564 1.725.267 1.998-.931l3.622-16.972.001-.001c.321-1.496-.541-2.081-1.527-1.714l-21.29 8.151c-1.453.564-1.431 1.374-.247 1.741l5.443 1.693 12.643-7.911c.595-.394 1.136-.176.691.218z"/></svg>
+					</a>
+					<a class="btna" href="viber://chat/?number=%2B380676262527" class="viber">
+						<svg class="svg-viber" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m23.155 13.893c.716-6.027-.344-9.832-2.256-11.553l.001-.001c-3.086-2.939-13.508-3.374-17.2.132-1.658 1.715-2.242 4.232-2.306 7.348-.064 3.117-.14 8.956 5.301 10.54h.005l-.005 2.419s-.037.98.589 1.177c.716.232 1.04-.223 3.267-2.883 3.724.323 6.584-.417 6.909-.525.752-.252 5.007-.815 5.695-6.654zm-12.237 5.477s-2.357 2.939-3.09 3.702c-.24.248-.503.225-.499-.267 0-.323.018-4.016.018-4.016-4.613-1.322-4.341-6.294-4.291-8.895.05-2.602.526-4.733 1.93-6.168 3.239-3.037 12.376-2.358 14.704-.17 2.846 2.523 1.833 9.651 1.839 9.894-.585 4.874-4.033 5.183-4.667 5.394-.271.09-2.786.737-5.944.526z"/><path d="m12.222 4.297c-.385 0-.385.6 0 .605 2.987.023 5.447 2.105 5.474 5.924 0 .403.59.398.585-.005h-.001c-.032-4.115-2.718-6.501-6.058-6.524z"/><path d="m16.151 10.193c-.009.398.58.417.585.014.049-2.269-1.35-4.138-3.979-4.335-.385-.028-.425.577-.041.605 2.28.173 3.481 1.729 3.435 3.716z"/><path d="m15.521 12.774c-.494-.286-.997-.108-1.205.173l-.435.563c-.221.286-.634.248-.634.248-3.014-.797-3.82-3.951-3.82-3.951s-.037-.427.239-.656l.544-.45c.272-.216.444-.736.167-1.247-.74-1.337-1.237-1.798-1.49-2.152-.266-.333-.666-.408-1.082-.183h-.009c-.865.506-1.812 1.453-1.509 2.428.517 1.028 1.467 4.305 4.495 6.781 1.423 1.171 3.675 2.371 4.631 2.648l.009.014c.942.314 1.858-.67 2.347-1.561v-.007c.217-.431.145-.839-.172-1.106-.562-.548-1.41-1.153-2.076-1.542z"/><path d="m13.169 8.104c.961.056 1.427.558 1.477 1.589.018.403.603.375.585-.028-.064-1.346-.766-2.096-2.03-2.166-.385-.023-.421.582-.032.605z"/></svg>
+					</a>
+				</div>
+			</div>
+			<div id="map"></div>
+			<a id="open-map" class="btn" href="https://goo.gl/maps/XUD1ayUBerW5HwMf8" target="_blank"><span>Открыть Google карту</span></a>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<div class="wrap">
+		<div id="footer-left">
+			<a href="" class="logo">
+				<img src="./assets/img/logo.png">
+			</a>
+			<div id="copyright">© Все права защищены 2020 </div>
+		</div>
+		<div id="footer-lang">
+			<div class="dlist-outer">
+				<div class="dlist-active"><span class="ua">UA</span></div><!--🇺🇦-->
+				<div class="dlist-hover">
+					<button type="button" class="dlist-burger"></button>
+					<ul class="dlist-elems">
+						<li class="dlist-elem"><a href="" class="ru">RU</a></li><!--🇷🇺-->
+						<li class="dlist-elem"><a href="" class="en">EN</a></li><!--🇬🇧 🏴󠁧󠁢󠁥󠁮󠁧󠁿-->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="footer-center">
+			<button type="button" class="footer-link ppd">Политика конфиденциальности</button>
+			<button type="button" class="footer-link pcd">Политика куки</button>
+		</div>
+		<div id="footer-right">
+			<div id="dev-by">Разработка сайта</div>
+			<a href="" id="dev-link">Проекция</a>
+		</div>
+	</div>
+</footer>
+<!--b-scripts-->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCP4r5-vmKYYLSLRey3roryHpjakbVshvo"></script>
+<script>
+	/*-для гугл карти координати ліпити сюди-*/
+	/*-Центр карти - це нульовий елемент масиву-*/
+	var coords = [
+		{lat: 49.995561, lng: 36.245038},
+		{lat: 49.995561, lng: 36.245038}
+	];
+</script>
+<script src="./assets/scripts/script.js?v=0018"></script>
+<!--e-scripts-->
+</body>
+
+</html>
