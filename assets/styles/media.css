@@ -86,11 +86,11 @@
 	}
 	.dlist-hover:before {
 		top: -59px;
-		right: -18px;
+		right: -10px;
 		width: 42px;
 		height: 60px;
 	}
-	.dlist-elems {
+	header .dlist-elems {
 		width: 180px;
 	}
 
@@ -661,6 +661,27 @@
 	/*-footer-*/
 	footer {
 		padding: 238px 0 60px;
+	}
+	#errorpage .bg:before {
+		font-size: 300px;
+		top: 100px;
+		right: calc(50% - 400px);
+	}
+	#errorsection .wrap {
+		bottom: 140px;
+		left: calc(50% - 356px);
+	}
+	#errorsection h2 {
+		font-size: 36px;
+		margin-bottom: 16px;
+	}
+	#errorsection .h3 {
+		font-size: 18px;
+		margin-bottom: 24px;
+	}
+	#errorpage .dlist-hover {
+		left: unset;
+		right: 0;
 	}
 }
 
@@ -1407,6 +1428,42 @@
 		width: 115px;
 		margin-bottom: 20px;
 	}
+
+	#errorpage .bg:before {
+		font-size: 100px;
+		top: 100px;
+		right: calc(50% - 400px);
+	}
+	#errorpage .bg:after {
+		font-size: 100px;
+		right: calc(50% - 160px);
+		width: 320px;
+		height: 310px;
+		background-size: contain;
+		background-repeat: no-repeat;
+	}
+	#errorpage .bg:before {
+		font-size: 300px;
+		top: 100px;
+		right: calc(50% - 400px);
+	}
+	#errorsection .wrap {
+		bottom: unset;
+		top: 164px;
+		left: calc(50% - 140px);
+	}
+	#errorsection h2 {
+		font-size: 36px;
+		margin-bottom: 16px;
+	}
+	#errorsection .h3 {
+		font-size: 18px;
+		margin-bottom: 24px;
+	}
+	#errorpage .dlist-hover {
+		left: 0;
+		right: unset;
+	}
 }
 
 
@@ -1425,3 +1482,5 @@ body:after {
     z-index: 999;
 } 
 */
+
+

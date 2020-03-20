@@ -20,11 +20,13 @@
 	<link rel="shortcut icon" href="./assets/img/fav.svg">
 	<title>MagicPaper</title>
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css">
+	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css">
 	<link rel="stylesheet" type="text/css" href="./assets/fonts/gilroy/font.css">
 	<!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/cc9d4f44c9/UntitledProject/style.css"> -->
 </head>
 
 <body id="errorpage">
+<div class="bg"></div>
 <header class="wrap">
 	<div id="header-left">
 		<a href="" class="logo">
@@ -33,23 +35,25 @@
 		<div class="logo-text">Сублимационная бумага в рулонах</div>
 	</div>
 	<div id="header-right">
-		<div id="top-tels-outer">
+		<div class="dlist-outer">
 			<a href="tel:+380734174813">+38 (073) 417 48 13</a>
-			<ul id="top-tels" class="hidden">
-				<li class="top-tel"><a href="tel:+380734174813">+38 (073) 417 48 13</a></li>
-				<li class="top-tel"><a href="tel:+380734174814">+38 (073) 417 48 14</a></li>
-				<li class="top-tel"><a href="tel:+380734174815">+38 (073) 417 48 14</a></li>
-			</ul>
-			<button type="button" id="top-tel-burger" class="hidden"></button>
+			<div class="dlist-hover">
+				<button type="button" class="dlist-burger"></button>
+				<ul class="dlist-elems">
+					<li class="dlist-elem"><a href="tel:+380734174813">+38 (073) 417 48 13</a></li>
+					<li class="dlist-elem"><a href="tel:+380734174814">+38 (073) 417 48 14</a></li>
+					<li class="dlist-elem"><a href="tel:+380734174815">+38 (073) 417 48 15</a></li>
+				</ul>
+			</div>
 		</div>
 	</div>
 </header>
 
-<section id="errossection">
+<section id="errorsection">
 	<div class="wrap">
 		<h2>Что-то пошло не так...</h2>
 		<div class="h3">Даной страницы не существует</div>
-		<a id="to-home" class="btn" href="">На главную</a>
+		<a id="to-home" class="btn" href=""><span>На главную</span></a>
 	</div>
 </section>
 <!--b-scripts-->
