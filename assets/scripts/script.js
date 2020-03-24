@@ -6,6 +6,7 @@ var Info = {
 }
 document.addEventListener("DOMContentLoaded", function(event) {
 	Info.init();
+	initPreloader();
 	setHeight(document.getElementsByClassName("dlist-elems"), "li");
 	runTgSwtch(
 		document.getElementsByClassName("tg-btn-faq"),
@@ -18,6 +19,60 @@ document.addEventListener("DOMContentLoaded", function(event) {
 	initPopup();
 	initForm();
 });
+
+function initPreloader() {
+	var imgs = document.getElementsByClassName("preload");
+	imgs = Array.from(imgs);
+	imgs.push(document.getElementsByTagName("video")[0]);
+	var prepercentage = document.getElementById("preloader-percentage");
+	var prebar = document.getElementById("preloader-progress");
+	console.log(imgs)
+	console.log(imgs[3].tagName)
+	console.log(imgs[22].tagName)
+	var percentage = 0;
+	var length = imgs.length;
+	var piece = 1 / length;
+	var pieceper = new Array(length).fill(0);
+	for (var j = 0; j < length; j++) {
+		const i = j;
+        var XHR = new XMLHttpRequest();
+        XHR.open('GET', imgs[i].dataset.src, true);
+        XHR.responseType = 'arraybuffer';
+        XHR.onload = function(e) {
+			var blob = new Blob([this.response]);
+			if(imgs[i].tagName == "DIV") {
+				imgs[i].style.backgroundImage = "url(" + window.URL.createObjectURL(blob) + ")";
+			} else {
+				imgs[i].src = window.URL.createObjectURL(blob);
+				imgs[i].load();
+				imgs[i].onloadeddata = function() {
+					imgs[i].play();
+				}
+			}
+			
+        };
+        XHR.onprogress = function(e) {
+			// thisImg.completedPercentage = parseInt((e.loaded / e.total) * 100);
+			pieceper[i] = piece * parseInt(e.loaded / e.total);
+			percentage = 0;
+			for (var p = 0; p < pieceper.length; p++) {
+				percentage += pieceper[p];
+			}
+			prepercentage.innerHTML = Math.ceil(percentage * 100) + "%"
+			prebar.style.transform = "translateX(" + -(100 - percentage * 100) + "%)";
+			console.log(percentage)
+			if(percentage >= 0.999) {
+				window.scrollTo({
+					top: 0,
+					behavior: "auto"
+				})
+				document.body.classList.remove("preloader")
+			}
+        };
+        XHR.send();		
+	}
+}
+
 
 function setHeight(parentClass, childsTag) {
 	for (let j = 0; j < parentClass.length; j++) {
@@ -202,21 +257,6 @@ function setCookie(cname, cvalue, exdays) {
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
-
-
-
-
-
-function serializeForm(form) {
-	console.log(form)
-	const formData = {};
-	const inputs = form.elements;
-	for (let i = 0; i < inputs.length; i++) {
-		if(inputs[i].name !== "")
-			formData[inputs[i].name] = inputs[i].value;
-	}
-	return formData;
-}
 
 
 function initForm() {

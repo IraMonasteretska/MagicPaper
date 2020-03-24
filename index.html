@@ -23,7 +23,11 @@
 	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css?v=0016">
 	<!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/cc9d4f44c9/UntitledProject/style.css"> -->
 </head>
-<body>	
+<body class="preloader">	
+<div id="preloader">
+	<div id="preloader-percentage">0</div>
+	<div id="preloader-progress"></div>
+</div>
 <div id="eclipse"></div>
 <div id="eclipse2"></div>
 
@@ -36,13 +40,15 @@
 
 <div class="popup-scroll ps1" id="p-complete-s">
 	<div id="p-complete" class="popup popmsg">
+		<div class="popup-bg preload" data-src="./assets/img/bg-get-price.png"></div>
 		<div class="h3">Готово</div>
 		<p class="h5">Прайс-лист будет загружен на ваше устройство</p>
 		<button type="button" class="btn gohome"><span>На главную</span></button>
 	</div>
 </div>
 <div class="popup-scroll ps1" id="p-sendedletter-s">
-	<div id="p-sendedletter" class="popup popmsg">
+	<div id="p-sendedletter" class="popup popmsg" >
+		<div class="popup-bg preload" data-src="./assets/img/maillettersMs.png"></div>
 		<div class="h3">Заявка отправлена</div>
 		<p class="h5">Наш менеджер свяжеться с вами в ближайшее время</p>
 		<button type="button" class="btn gohome"><span>На главную</span></button>
@@ -50,6 +56,7 @@
 </div>
 <div class="popup-scroll ps1" id="p-sended-s">
 	<div id="p-sended" class="popup popmsg">
+		<div class="popup-bg preload" data-src="./assets/img/main-paper.png"></div>
 		<div class="h3">Заявка отправлена</div>
 		<p class="h5">Наш менеджер свяжеться с вами в ближайшее время</p>
 		<button type="button" class="btn gohome"><span>На главную</span></button>
@@ -167,12 +174,17 @@
 	</div>
 </header>
 <section id="main">
-	<div class="bg"></div>
+	<div class="bg">
+		<div class="bg-1 preload" data-src="./assets/img/main-paper.png"></div>
+	</div>
 	<div class="wrap">
 		<div class="text">
 			<div id="h1-sup">Официальный импортер</div>
 			<h1>Сублимационная бумага в рулонах</h1>
-			<button class="btn mobile list" onclick="openPPriceList()"><span>Скачать прайс-лист</span></button>
+			<button class="btn mobile list" onclick="openPPriceList()">
+				<span>Скачать прайс-лист</span>
+				<div class="preload" data-src="./assets/img/bg-get-price.png"></div>
+			</button>
 			<div id="main-descr">
 				<div class="circle-descr">
 					<div class="circle-descr-img">
@@ -204,12 +216,17 @@
 			</div>
 		</div>
 		<div class="form-outer">
-			<div class="form-bg"></div>
+			<div class="form-bg">
+				<div class="form-bg-1 preload" data-src="./assets/img/bg-get-price.png"></div>
+			</div>
 			<div class="form-title">Скачайте полный прайс-лист</div>
 			<form id="get-price-top" action="" method="GET">
 				<input type="text" name="name" placeholder="Как к вам обращаться?">
 				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
-				<button class="btn list" type="submit"><span>Скачать прайс-лист</span></button>
+				<button class="btn list" type="submit">
+					<span>Скачать прайс-лист</span>
+					<div class="preload" data-src="./assets/img/bg-get-price.png"></div>
+				</button>
 				<label class="checkbox-outer">
 					<div>Вы согласны с условиями</div>
 					<input type="checkbox" checked name="pdpc">
@@ -222,7 +239,10 @@
 </section>
 <section class="decor-outer" id="in-stock">
 	<div class="decor">
-		<div class="decor-bg"></div>
+		<div class="decor-bg">
+			<div class="decor-bg-1 preload" data-src="./assets/img/bg-bubble-t.png"></div>
+			<div class="decor-bg-2 preload" data-src="./assets/img/4papers2.png"></div>
+		</div>
 		<div class="wrap">
 			<div class="text">
 				<h2>Всегда в наличии <br>4 плотности бумаги</h2>
@@ -249,7 +269,10 @@
 	</div>
 </section>
 <section class="white" id="width">
-	<div class="bg"></div>
+	<div class="bg">
+		<div class="bg-1 preload" data-src="./assets/img/bg-width.png"></div>
+		<div class="bg-2"></div>
+	</div>
 	<div class="wrap">
 		<div class="text">
 			<div id="width-img-title">1,6 <span>метра</span></div>
@@ -264,7 +287,9 @@
 	</div>
 </section>
 <section id="download-price">
-	<div class="bg"></div>
+	<div class="bg">
+		<div class="bg-1 preload" data-src="./assets/img/bg-get-price.png"></div>
+	</div>
 	<div class="wrap">
 		<div class="text">
 			<h2>Скачайте прайс-лист продукции</h2>
@@ -278,7 +303,10 @@
 			<form id="get-price" action="" method="GET">
 				<input type="text" name="name" placeholder="Как к вам обращаться?">
 				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
-				<button class="btn list" type="submit"><span>Скачать прайс-лист</span></button>
+				<button class="btn list" type="submit">
+					<span>Скачать прайс-лист</span>
+					<div class="preload" data-src="./assets/img/bg-get-price.png"></div>
+				</button>
 				<label class="checkbox-outer">
 					<div>Вы согласны с условиями</div>
 					<input type="checkbox" checked name="pdpc">
@@ -324,16 +352,15 @@
 					</div>
 				</div>
 			</div>
-			<video autoplay loop muted>
-				<source type="video/mp4" src="./assets/video/flower.mp4">
+			<video autoplay loop muted class="preload" data-src="./assets/video/flower.mp4">
 			</video>
 		</div>
 		<div id="uninterrupted-supplier">
 			<div id="pallet-img">
-				<img src="./assets/img/pallet.png">
+				<div id="pallet-img-img" class="preload" data-src="./assets/img/pallet.png"></div>
 			</div>
 			<div id="uninterrupted-text">
-				<div class="dlogo"></div>
+				<div class="dlogo preload" data-src="./assets/img/wlogo.png"></div>
 				<p class="h3">Ваш бесперебойный поставщик сублимационной бумаги</p>
 				<hr>
 				<p>Мы создаем максимально удобные условия для сотрудничества на длительный срок</p>
@@ -343,7 +370,10 @@
 </section>
 <section class="decor-outer" id="order-free">
 	<div class="decor">
-		<div class="decor-bg"></div>
+		<div class="decor-bg">
+			<div class="decor-bg-1 preload" data-src="./assets/img/bg-bubble-t.png"></div>
+			<div class="decor-bg-2 preload" data-src="./assets/img/bg-single-sheet.png"></div>
+		</div>
 		<div class="wrap">
 			<div class="text">
 				<h2>Закажите бесплатные образцы бумаги</h2>
@@ -391,16 +421,23 @@
 	</div>
 </section>
 <section id="shipment">
-	<div class="bg"></div>
+	<div class="bg">
+		<div class="bg-1 preload" data-src="./assets/img/map.png"></div>
+	</div>
 	<div class="wrap">
 		<h2>Отгрузка происходит в день оформления заказа</h2>
-		<div id="shipment-circle"></div>
+		<div id="shipment-circle">
+			<div class="preload" id="shipment-circle-1" data-src="./assets/img/Stopwatch.png"></div>
+		</div>
 		<p class="h3">Мы знаем, что оперативность и скорость доставки очень важна для наших клиентов</p>
 	</div>
 </section>
 <section class="decor-outer" id="owner">
 	<div class="decor">
-		<div class="decor-bg"></div>
+		<div class="decor-bg">
+			<div class="decor-bg-1 preload" data-src="./assets/img/bg-bubble-t.png"></div>
+			<div class="decor-bg-2 preload" data-src="./assets/img/bg-owner2.png"></div>
+		</div>
 		<div class="wrap">
 			<p class="h3">Мы первые в Украине, кто занялись полным циклом сублимационной печати, от поставок техники до тестирования различных расходных материалов.</p>
 			<hr class="mobile">
@@ -520,7 +557,9 @@
 
 <section class="decor-outer" id="contacts">
 	<div class="decor">
-		<div class="decor-bg"></div>
+		<div class="decor-bg">
+			<div class="decor-bg-1 preload" data-src="./assets/img/bg-bubble-t.png"></div>
+		</div>
 		<div class="wrap">
 			<div class="text">
 				<h2>Наши контакты</h2>
@@ -548,7 +587,7 @@
 					</a>
 				</div>
 			</div>
-			<div id="map"></div>
+			<div id="map" class="preload" data-src="./assets/img/mapg.png"></div>
 			<a id="open-map" class="btn" href="https://goo.gl/maps/XUD1ayUBerW5HwMf8" target="_blank"><span>Открыть Google карту</span></a>
 		</div>
 	</div>

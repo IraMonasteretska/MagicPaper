@@ -34,11 +34,7 @@
 	}
 
 }
-@media screen and (min-width: 1181px) {
-	#in-stock .decor-bg:after {
-		background-image: url(../img/4papers2.png);
-	}
-}
+
 @media screen and (max-width: 1180px) {
 	body {
 		background-color: var(--bg-mob);
@@ -111,7 +107,7 @@
 		flex-direction: column;
 		z-index: 1;
 	}
-	#main .bg:before {
+	#main .bg-1 {
 		top: 58px;
 		left: calc(50% + 76px);
 		width: 475px;
@@ -182,7 +178,7 @@
 		padding: 0 10px 2px;
 		margin-right: 200px;
 	}
-	form .btn:after {
+	form .btn .preload {
 		display: none;
 	}
 	.ppd {
@@ -217,7 +213,7 @@
 	#in-stock h2 {
 		margin: 0 0 18px;
 	}
-	#in-stock .decor-bg:before {
+	#in-stock .decor-bg-1 {
 		width: 1841px;
 		height: 1381px;
 		top: -211px;
@@ -244,8 +240,8 @@
 	#in-stock p br {
 		display: none;
 	}
-	#in-stock .decor-bg:after {
-		background-image: url(../img/4papersM.png);
+	#in-stock .decor-bg-2 {
+		background-image: url(../img/4papersM.png) !important;
 		top: 0;
 		right: 0;
 		bottom: 0;
@@ -277,14 +273,14 @@
 		font-size: 18px;
 		max-width: 180px;
 	}
-	#width .bg:before {
+	#width .bg-1 {
 		width: 852px;
 		height: 700px;
 		transform: scaleX(-1);
 		left: calc(50% - 760px);
 		top: 590px;
 	}
-	#width .bg:after {
+	#width .bg-2 {
 		content: "";
 		position: absolute;
 		top: 590px;
@@ -386,7 +382,7 @@
 		width: 299px;
 		height: 299px;
 	}
-	#pallet-img img {
+	#pallet-img-img {
 		width: 311px;
 		height: 276px;
 		left: 20px;
@@ -409,13 +405,13 @@
 		padding: 45px 0 314px;
 		top: -334px;
 	}
-	#order-free .decor-bg:before {
+	#order-free .decor-bg-1 {
 		width: 994px;
 		height: 878px;
 		top: -117px;
 		left: -30px;
 	}
-	#order-free .decor-bg:after {
+	#order-free .decor-bg-2 {
 		top: 64px;
 		left: 423px;
 	}
@@ -457,7 +453,7 @@
 	#shipment {
 		padding: 732px 0 392px;
 	}
-	#shipment .bg:before {
+	#shipment .bg-1 {
 		/* top: 740px; */
 		top: 712px;
 		left: calc(50% - 355px);
@@ -509,12 +505,12 @@
 	#owner h2 {
 		margin: 36px 0 7px;
 	}
-	#owner .decor-bg:before {
+	#owner .decor-bg-1 {
 		top: -275px;
 		right: calc(50% - 760px);
 		opacity: 0.2;
 	}
-	#owner .decor-bg:after {
+	#owner .decor-bg-2 {
 		width: 463px;
 		height: 718px;
 		top: 186px;
@@ -662,7 +658,7 @@
 	footer {
 		padding: 238px 0 60px;
 	}
-	#errorpage .bg:before {
+	#errorpage .bg-1 {
 		font-size: 300px;
 		top: 100px;
 		right: calc(50% - 400px);
@@ -695,6 +691,9 @@
 	}
 }
 @media screen and (max-width: 767px) {
+	body {
+		overflow-x: hidden;
+	}
 	.top-social {
 		border-radius: 3px;
 	}
@@ -706,7 +705,7 @@
 		padding-left: 32px;
     	justify-content: flex-start;
 	}
-	form .btn:after {
+	form .btn .preload {
 		display: block;
 	}
 	form .mflex {
@@ -813,7 +812,7 @@
 	#main {
 		padding: 186px 0 298px;
 	}
-	#main .bg:before {
+	#main .bg-1 {
 		width: 263px;
 		height: 150px;
 		left: 50%;
@@ -863,14 +862,14 @@
 		top: -224px;
 		padding: 27px 0 40px;
 	}
-	#in-stock .decor-bg:before {
+	#in-stock .decor-bg-1 {
 		width: 1409px;
 		height: 1207px;
 		opacity: 0.2;
 		top: -100px;
 		left: -700px;
 	}
-	#in-stock .decor-bg:after {
+	#in-stock .decor-bg-2 {
 		width: 280px;
 		background-image: url(../img/4papersMs.png);
 	}
@@ -946,14 +945,14 @@
 		flex-direction: column;
 		justify-content: unset;
 	}
-	#width .bg:before {
+	#width .bg-1 {
 		width: 728px;
 		height: 784px;
 		top: 325px;
 		left: calc(50% - 222px);
 		transform: rotate(7deg);
 	}
-	#width .bg:after {
+	#width .bg-2 {
 		width: 728px;
 		height: 120px;
 		top: 325px;
@@ -988,7 +987,7 @@
 		margin-bottom: 0;
 		padding: 75px 0 79px;
 	}
-	#main .form-bg:before, #download-price .form-bg:before {
+	#main .form-bg-1, #download-price .form-bg-1 {
 		display: none;
 	}
 	#download-price h2 {
@@ -1092,8 +1091,6 @@
 	}
 	#pallet-img {
 		margin: 46px 0 0;
-	}
-	#pallet-img {
 		width: 220px;
 		height: 220px;
 		left: 16px;
@@ -1102,7 +1099,7 @@
 		width: 250px;
 		height: 250px;
 	}
-	#pallet-img img {
+	#pallet-img-img {
 		width: 242px;
 		height: 222px;
 	}
@@ -1112,7 +1109,7 @@
 		top: -203px;
 		padding: 33px 0 40px;
 	}
-	#order-free .decor-bg:before {
+	#order-free .decor-bg-1 {
 		width: 986px;
 		height: 849px;
 		top: 70px;
@@ -1154,7 +1151,7 @@
 	#shipment {
 		padding: 280px 0 163px;
 	}
-	#shipment .bg:before {
+	#shipment .bg-1 {
 		width: 376px;
 		height: 234px;
 		top: 358px;
@@ -1219,14 +1216,14 @@
 	#owner #owner-duration p {
 		width: 230px;
 	}
-	#owner .decor-bg:before {
+	#owner .decor-bg-1 {
 		width: 964px;
 		height: 867px;
 		top: -18px;
 		right: calc(50% - 560px);
 		opacity: 0.2;
 	}
-	#owner .decor-bg:after {
+	#owner .decor-bg-2 {
 		width: 213px;
 		height: 330px;
 		left: 115px;
@@ -1382,21 +1379,21 @@
 		left: 60px;
 		width: 238px;
 		height: 149px;
-		background-image: url(../img/bg-get-price.png);
+		/* background-image: url(../img/bg-get-price.png); */
 	}
 	#p-sendedletter:before {
 		top: -65px;
 		left: 38px;
 		width: 201px;
 		height: 157px;
-		background-image: url(../img/maillettersMs.png);
+		/* background-image: url(../img/maillettersMs.png); */
 	}
 	#p-sended:before {
 		top: -30px;
 		left: 0;
 		width: 263px;
 		height: 150px;
-		background-image: url(../img/main-paper.png);
+		/* background-image: url(../img/main-paper.png); */
 	}
 	.popup.form-outer .h5 {
 		font-weight: bold;
@@ -1429,12 +1426,12 @@
 		margin-bottom: 20px;
 	}
 
-	#errorpage .bg:before {
+	#errorpage .bg-1 {
 		font-size: 100px;
 		top: 100px;
 		right: calc(50% - 400px);
 	}
-	#errorpage .bg:after {
+	#errorpage .bg-2 {
 		font-size: 100px;
 		right: calc(50% - 160px);
 		width: 320px;
@@ -1442,7 +1439,7 @@
 		background-size: contain;
 		background-repeat: no-repeat;
 	}
-	#errorpage .bg:before {
+	#errorpage .bg-1 {
 		font-size: 300px;
 		top: 100px;
 		right: calc(50% - 400px);
