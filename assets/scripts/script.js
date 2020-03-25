@@ -54,7 +54,7 @@ function initPreloader() {
 
 			var blob = new Blob([this.response]);
 			for (var j = 0; j < amount; j++) {
-				cj = j
+				const cj = j
 				if (elems[cj][1] == ci) {
 					if (elems[cj][0].tagName == "DIV") {
 						elems[cj][0].style.backgroundImage = "url(" + window.URL.createObjectURL(blob) + ")";
