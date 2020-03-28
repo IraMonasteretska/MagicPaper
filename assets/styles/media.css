@@ -1139,9 +1139,22 @@
 	.popup.form-outer.white input[type="text"] {
 		width: unset;
 		font-size: 14px;
+		font-weight: 600;
+	}
+	.density-radio .btna {
+		font-weight: 600;
+		padding: 0;
+		text-align: center;
+		background-color: white;
+	}
+	.density-radio .btna span:after {
+		white-space: nowrap;
 	}
 	.form-outer.white .form-radio-title {
-		text-align: center;
+		display: none;
+	}
+	#get-oder-free input[name^="addres"] {
+		display: none;
 	}
 	#order-free p.h3 {
 		width: 230px;
@@ -1356,7 +1369,7 @@
 		border-width: 5px;
 	}
 	.popup.popmsg {
-		padding: 52px 15px 40px;
+		padding: 110px 15px 40px;
 	}
 	.popup.poptext {
 		padding: 34px 15px 40px;
@@ -1366,29 +1379,26 @@
 		border-width: 5px;
 		padding: 34px 15px 40px;
 	}
-	.popmsg {
-		padding-top: 110px;
-	}
 	.popcookie {
 		padding: 20px 15px;
 		left: 36px;
 		width: unset;
 	}
-	#p-complete:before {
+	#p-complete .popup-bg {
 		top: -54px;
 		left: 60px;
 		width: 238px;
 		height: 149px;
 		/* background-image: url(../img/bg-get-price.png); */
 	}
-	#p-sendedletter:before {
+	#p-sendedletter .popup-bg {
 		top: -65px;
 		left: 38px;
 		width: 201px;
 		height: 157px;
 		/* background-image: url(../img/maillettersMs.png); */
 	}
-	#p-sended:before {
+	#p-sended .popup-bg {
 		top: -30px;
 		left: 0;
 		width: 263px;
@@ -1418,12 +1428,11 @@
 		display: none;
 	}
 	.popup .density-radios {
-		flex-wrap: wrap;
+		/* flex-wrap: wrap; */
 		margin-bottom: 20px;
 	}
 	.popup .density-radio {
-		width: 115px;
-		margin-bottom: 20px;
+		width: 50px;
 	}
 
 	#errorpage .bg-1 {

@@ -22,6 +22,7 @@
 	<link rel="stylesheet" type="text/css" href="./assets/styles/style.css?v=0016">
 	<link rel="stylesheet" type="text/css" href="./assets/styles/media.css?v=0016">
 	<!-- <link rel="stylesheet" href="https://i.icomoon.io/public/temp/cc9d4f44c9/UntitledProject/style.css"> -->
+	<script>var onLoaded = [];</script>
 </head>
 <body class="preloader">	
 <div id="preloader">
@@ -68,8 +69,14 @@
 	<div id="p-price-list" class="popup form-outer white">
 		<div class="h5">Заполните форму и получите прайс-лист</div>
 		<form id="get-price-top" action="" method="GET">
-			<input type="text" name="name" placeholder="Как к вам обращаться?">
-			<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+			<div class="important">
+				<input type="text" name="name" placeholder="Как к вам обращаться?">
+				<span class="inportant-text">Поле обязательно для заполнения</span>
+			</div>
+			<div class="important">
+				<span class="important-clear"></span>
+				<input type="text" name="tel" placeholder="Номер телефона"></div>
+				<span class="inportant-text">Поле обязательно для заполнения</span>
 			<button class="btn" type="submit"><span>Скачать прайс-лист</span></button>
 			<label class="checkbox-outer">
 				<div>Вы согласны с условиями</div>
@@ -82,10 +89,11 @@
 </div>
 <div class="popup-scroll ps1" id="p-order-free-s">
 	<div id="p-order-free" class="popup form-outer white">
-		<div class="h5">Заполните форму и получите прайс-лист</div>
+		<div class="h5">Закажите бесплатные образцы бумаги</div>
 		<form id="get-oder-free" action="" method="GET">
 			<input type="text" name="name" placeholder="Как к вам обращаться?">
-			<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+			<div class="important">
+				<span class="important-clear"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
 			<input type="text" name="addres" placeholder="Город и отделение Новой Почты">
 			<div class="form-radio-title">Какая плотность бумаги вам нужна?</div>
 			<div class="density-radios">
@@ -221,8 +229,15 @@
 			</div>
 			<div class="form-title">Скачайте полный прайс-лист</div>
 			<form id="get-price-top" action="" method="GET">
-				<input type="text" name="name" placeholder="Как к вам обращаться?">
-				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+				<div class="important">
+					<input type="text" name="name" placeholder="Как к вам обращаться?">
+					<span class="inportant-text">Поле обязательно для заполнения</span>
+				</div>
+				<div class="validate important">
+					<span class="important-clear"></span>
+					<input type="text" name="tel" placeholder="Номер телефона">
+					<span class="inportant-text">Поле обязательно для заполнения</span>
+				</div>
 				<button class="btn list" type="submit">
 					<span>Скачать прайс-лист</span>
 					<div class="preload" data-src="./assets/img/bg-get-price.png"></div>
@@ -302,7 +317,7 @@
 			<div class="form-bg"></div>
 			<form id="get-price" action="" method="GET">
 				<input type="text" name="name" placeholder="Как к вам обращаться?">
-				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+				<div class="validate"><span class="important-clear"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
 				<button class="btn list" type="submit">
 					<span>Скачать прайс-лист</span>
 					<div class="preload" data-src="./assets/img/bg-get-price.png"></div>
@@ -385,7 +400,7 @@
 			<div class="form-outer white">
 				<form id="get-oder-free" action="" method="GET">
 					<input type="text" name="name" placeholder="Как к вам обращаться?">
-					<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+					<div class="validate"><span class="important-clear"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
 					<input type="text" name="addres" placeholder="Город и отделение Новой Почты">
 					<div class="form-radio-title">Какая плотность бумаги вам нужна?</div>
 					<div class="density-radios">
@@ -540,7 +555,7 @@
 				<div class="form-title">Заявка на консультацию</div>
 				<div class="form-text">Оставьте заявку и наш менеджер свяжемся с вами в ближайшее время</div>
 				<input type="text" name="name" placeholder="Как к вам обращаться?">
-				<div class="validate"><span class="validate-support"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
+				<div class="validate"><span class="important-clear"></span><input type="text" name="tel" placeholder="Номер телефона"></div>
 				<button class="btn" type="submit"><span>Создать заявку</span></button>
 				<div class="mflex">
 					<label class="checkbox-outer">

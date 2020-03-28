@@ -17,11 +17,18 @@ document.addEventListener("DOMContentLoaded", function(event) {
 		"accordion-btn", "accordion-hiding"
 	);
 	initPopup();
-	initForm();
+	initForms();
+	for (let i = 0; i < onLoaded.length; i++) {
+		try {
+			onLoaded[i]();
+		} catch(error) {
+			console.error("There are some error in onLoaded:");
+			console.error(error);
+		}
+	}
 });
 
-
-
+// onLoaded.push(function() { CODE }); //onLoad EXAMPLE!!!
 
 function initPreloader() {
 	var percentage = 0;
@@ -51,10 +58,9 @@ function initPreloader() {
         XHR.open('GET', srcs[ci], true);
         XHR.responseType = 'arraybuffer';
         XHR.onload = function(e) {
-
 			var blob = new Blob([this.response]);
 			for (var j = 0; j < amount; j++) {
-				const cj = j
+				const cj = j;
 				if (elems[cj][1] == ci) {
 					if (elems[cj][0].tagName == "DIV") {
 						elems[cj][0].style.backgroundImage = "url(" + window.URL.createObjectURL(blob) + ")";
@@ -88,10 +94,10 @@ function initPreloader() {
 
 
 function setHeight(parentClass, childsTag) {
-	for (let j = 0; j < parentClass.amount; j++) {
+	for (let j = 0; j < parentClass.length; j++) {
 		var totalH = 0;
 		var childs = parentClass[j].getElementsByTagName(childsTag);
-		for (let i = 0; i < childs.amount; i++) {
+		for (let i = 0; i < childs.length; i++) {
 			totalH += childs[i].getBoundingClientRect().height;
 		}
 		parentClass[j].style.height = totalH + "px";
@@ -102,7 +108,7 @@ function setHeight(parentClass, childsTag) {
 function runTgSwtch(btns, childs) {
 	var nowChild = 0;
 	btns = Array.prototype.slice.call(btns);
-	for (var i = 0; i < btns.amount; i++) {
+	for (var i = 0; i < btns.length; i++) {
 		btns[i].onclick = function() {
 			var nowBtn = btns.indexOf(this);
 			if (nowBtn != nowChild) {
@@ -118,7 +124,7 @@ function runTgSwtch(btns, childs) {
 }
 
 function runAccordion2(parents, btnname, hiding) {
-	for (var i = 0; i < parents.amount; i++) {
+	for (var i = 0; i < parents.length; i++) {
 		const parent = parents[i];
 		var btn = parent.getElementsByClassName(btnname)[0];
 		var hid = parent.getElementsByClassName(hiding)[0];
@@ -131,7 +137,7 @@ function runAccordion2(parents, btnname, hiding) {
 }
 
 function closeAccordion2(parents) {
-	for (var i = 0; i < parents.amount; i++) {
+	for (var i = 0; i < parents.length; i++) {
 		parents[i].classList.add("hidden")
 	}
 }
@@ -146,7 +152,7 @@ function initMap() {
 	var iconurl = false;
 	if (Info.vw > 767) { iconurl = "./assets/img/pin.png" } else { iconurl = "./assets/img/pinMs.png" }
 	var markers = []
-	for (var i = 1; i < coords.amount; i++) {
+	for (var i = 1; i < coords.length; i++) {
 		markers.push (
 			new google.maps.Marker({
 				position: coords[i],
@@ -175,25 +181,26 @@ function initPopup () {
 	var poptext = document.getElementsByClassName("poptext");
 	var popups = document.getElementsByClassName("popup");
 	Popup.eclipse.onclick = function() {
-		for (var i = 0; i < popups.amount; i++) {
+		for (var i = 0; i < popups.length; i++) {
 			popups[i].parentNode.classList.remove("active");
 		}
 		document.body.classList.remove("eclipse");
 	}
 	Popup.eclipse2.onclick = function() {
-		for (var i = 0; i < poptext.amount; i++) {
+		for (var i = 0; i < poptext.length; i++) {
 			poptext[i].parentNode.classList.remove("active");
 		}
 		document.body.classList.remove("eclipse2");
 	}
 
-	for (var i = 0; i < popmsg.amount; i++) {
+	for (var i = 0; i < popmsg.length; i++) {
+		console.log("gohome")
 		popmsg[i].getElementsByClassName("gohome")[0].onclick = function() {
 			this.parentNode.parentNode.classList.remove("active");
 			document.body.classList.remove("eclipse");
 		}
 	}
-	for (var i = 0; i < poptext.amount; i++) {
+	for (var i = 0; i < poptext.length; i++) {
 		poptext[i].getElementsByClassName("close")[0].onclick = function() {
 			this.parentNode.parentNode.classList.remove("active");
 			document.body.classList.remove("eclipse2");
@@ -202,14 +209,14 @@ function initPopup () {
 
 
 	var ppd = document.getElementsByClassName("ppd");
-	for (var i = 0; i < ppd.amount; i++) {
+	for (var i = 0; i < ppd.length; i++) {
 		ppd[i].onclick = function() {
 			document.body.classList.add("eclipse2");
 			document.getElementById("p-privacy-s").classList.add("active");
 		}
 	}
 	var pcd = document.getElementsByClassName("pcd");
-	for (var i = 0; i < pcd.amount; i++) {
+	for (var i = 0; i < pcd.length; i++) {
 		pcd[i].onclick = function() {
 			document.body.classList.add("eclipse2");
 			document.getElementById("p-cookie-s").classList.add("active");
@@ -223,7 +230,7 @@ function initPopup () {
 	if (getCookie("cookieAccept") != "1") {
 		Popup.cookie.elem.classList.add("active");
 		Popup.cookie.accept.onclick = function() {
-			setCookie("cookieAccept", "1", 60);
+			setCookie("cookieAccept", "1", 365); //setDays-365
 			Popup.cookie.elem.classList.remove("active");
 		}
 		Popup.cookie.close.onclick = function() {
@@ -264,36 +271,42 @@ function getCookie(name) {
 }
 function setCookie(cname, cvalue, exdays) {
 	var d = new Date();
-	// d.setTime(d.getTime() + (exdays*24*60*60*1000));
-	d.setTime(d.getTime() + (exdays*1000));
+	d.setTime(d.getTime() + (exdays*24*60*60*1000));
 	var expires = "expires="+ d.toUTCString();
 	document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
 
 
 
-function initForm() {
+function initForms() {
 	var forms = document.getElementsByTagName("form");
-	for (var i = 0; i < forms.amount; i++) {
-		forms[i].onsubmit = function(e) {
-			var elem = this.querySelector("input[name='tel']")
-			if(!validPhone( elem.value )) {
-				e.preventDefault();
-				elem.parentNode.classList.add("invalid");
-			} else {
-				elem.parentNode.classList.remove("invalid");
+	for (var i = 0; i < forms.length; i++) {
+		const ci = i;
+		console.log(ci, forms[ci])
+		forms[ci].onsubmit = function(e) {
+			const importants = this.getElementsByClassName("important");
+			for (let j = 0; j < importants.length; j++) {
+				const cj = j;
+				const input = importants[cj].getElementsByTagName("input")[0];
+				if (input.value == "") {
+					e.preventDefault()
+					input.parentNode.classList.add("empty");
+					input.onkeyup = function() {
+						if (input.value != "") {
+							input.parentNode.classList.remove("empty");
+						}
+					}
+				} else {
+					input.parentNode.classList.remove("empty");
+					input.onkeyup = function() {return;}
+				}				
 			}
 		}
 	}
 	var valsup = document.getElementsByClassName("validate-support")
-	for (var i = 0; i < valsup.amount; i++) {
+	for (var i = 0; i < valsup.length; i++) {
 		valsup[i].onclick = function() {
 			this.parentNode.classList.remove("invalid");
 		}
 	}
 }
-function validPhone(phone) {
-	var re = /^\d[\d\(\)\ -]{8}\d$/;
-	var re2 = /^((\+380)+([0-9]){9})$/;
-    return re.test(phone) || re2.test(phone);
-}  

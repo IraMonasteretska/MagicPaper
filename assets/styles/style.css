@@ -906,14 +906,10 @@ input[type="text"] {
 form input {
 	margin-bottom: 20px;
 }
-.validate {
-	display: flex;
-	position: relative;
-}
-.validate input {
-	width: 100%;
-}
-.validate-support {
+
+
+
+.important-clear {
 	position: absolute;
 	display: none;
 	top: 18px;
@@ -926,8 +922,8 @@ form input {
 	cursor: pointer;
 	outline: none;
 }
-.validate-support:before,
-.validate-support:after {
+.important-clear:before,
+.important-clear:after {
 	content: "";
 	position: absolute;
 	top: 50%;
@@ -937,15 +933,33 @@ form input {
 	background-color: white;
 	transform: translate(-50%, -50%);
 }
-.validate-support:after {
+.important-clear:after {
 	width: 2px;
 	height: 10px;
 }
-form .validate.invalid input[type="text"] {
+form .important.invalid input[type="text"] {
 	color: #ff4e60;
 }
-.validate.invalid .validate-support {
+.validate.invalid .important-clear {
 	display: block;
+}
+.important {
+	position: relative;
+	display: flex;
+}
+.important input {
+	width: 100%;
+}
+.inportant-text {
+	position: absolute;
+	font-size: 12px;
+	left: 31px;
+	bottom: 4px;
+	color: #ff4e60;
+	visibility: hidden;
+}
+.important.empty .inportant-text {
+	visibility: visible;
 }
 
 
